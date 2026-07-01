@@ -77,7 +77,7 @@ export const metadata: Metadata = {
     canonical: BUSINESS.domain,
   },
   verification: {
-    google: "your-google-verification-code",
+    google: "IhiGB5ygP0iTvHzGzuw0hMUMhUQIcd7-rGY5I2voMTY",
   },
 };
 
