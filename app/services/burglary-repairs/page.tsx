@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ShieldAlert } from "lucide-react";
 import ServicePageLayout from "@/components/ui/ServicePageLayout";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
-import { generateServiceSchema, generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/schema";
+import { generateServiceSchema, generateBreadcrumbSchema, generateWebPageSchema, generateFAQSchema } from "@/lib/schema";
 import { BUSINESS } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -42,9 +42,22 @@ export default function BurglaryRepairsPage() {
     { name: "Services", href: "/services" },
     { name: "Burglary Repairs", href: "/services/burglary-repairs" },
   ]);
+  const faqSchema = generateFAQSchema([
+    { question: "What should I do immediately after a burglary in Kennington?", answer: "If you feel unsafe, call 999. Secure a crime reference number, do not touch anything until police attend, then call Lockstar for emergency boarding up and lock replacement." },
+    { question: "How quickly can you arrive after a break-in in SE11?", answer: "We aim to arrive within 30 minutes for emergency post-burglary response across SE11 and surrounding areas." },
+    { question: "Do you provide emergency boarding up after a break-in?", answer: "Yes. We provide immediate emergency boarding up to secure your property while permanent repairs are arranged." },
+    { question: "Can you repair a damaged door frame after a burglary?", answer: "Yes. We carry out door frame repairs and reinforcement as part of our post-burglary repair service." },
+    { question: "What locks do you fit after a break-in to prevent reoccurrence?", answer: "We always upgrade to anti-snap, BS3621-approved cylinders and recommend door frame reinforcement hardware after a burglary." },
+    { question: "Can I claim on my insurance for locksmith costs after a burglary?", answer: "In most cases yes. We provide fully itemised invoices and photographic evidence suitable for insurance claims." },
+    { question: "Is it safe to re-enter my property after a burglary?", answer: "Not until it has been properly secured. We make your property secure before we leave so you can return safely." },
+    { question: "Can you do the boarding up and lock replacement on the same visit?", answer: "Yes. We aim to complete all emergency security work in a single visit so you are not left vulnerable." },
+    { question: "What reinforcement do you fit to prevent future break-ins?", answer: "We fit anti-snap cylinders, steel door frame reinforcement plates, hinge bolt sets, and security keep hardware." },
+    { question: "How much do burglary repair services cost in Kennington?", answer: "Emergency boarding up from £89. Lock replacement from £89. Full post-burglary security package from £199. Fixed price quoted before work." },
+  ], "/services/burglary-repairs");
 
   return (
     <>
+      <SchemaMarkup schema={faqSchema} />
       <SchemaMarkup schema={webPageSchema} />
       <SchemaMarkup schema={serviceSchema} />
       <SchemaMarkup schema={breadcrumbSchema} />

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Plus } from "lucide-react";
 import ServicePageLayout from "@/components/ui/ServicePageLayout";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
-import { generateServiceSchema, generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/schema";
+import { generateServiceSchema, generateBreadcrumbSchema, generateWebPageSchema, generateFAQSchema } from "@/lib/schema";
 import { BUSINESS } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -42,9 +42,22 @@ export default function LockInstallationPage() {
     { name: "Services", href: "/services" },
     { name: "Lock Installation", href: "/services/lock-installation" },
   ]);
+  const faqSchema = generateFAQSchema([
+    { question: "What types of locks do you install in Kennington?", answer: "We install Yale rim locks, BS3621 mortice deadlocks, UPVC cylinders, high-security cylinders, window locks, garage locks, and smart locks." },
+    { question: "How do I know which lock is right for my door?", answer: "We assess your door, frame construction, and insurance requirements before recommending the correct lock type and security grade." },
+    { question: "Do the locks you install meet home insurance requirements?", answer: "Yes. All locks we recommend and supply meet BS3621 and standard UK home insurance requirements. We advise specifically on your policy if required." },
+    { question: "Can you install a lock on a new door?", answer: "Yes. New door lock installation including mortice pocket cutting is within our capability for all standard timber and composite doors." },
+    { question: "What is the difference between a rim lock and a mortice lock?", answer: "A rim lock mounts on the door surface — the Yale nightlatch is a common example. A mortice lock sits inside the door body and provides significantly higher security." },
+    { question: "Can you install a lock on a fire door?", answer: "Yes. We install appropriate fire door hardware including BS EN 12209-compliant mortice locks suitable for fire-rated doors." },
+    { question: "How long does lock installation take?", answer: "A standard deadlock installation takes 45–90 minutes. Cylinder-only installations are typically completed in under 30 minutes." },
+    { question: "Do you install high-security locks such as Mul-T-Lock and Banham?", answer: "Yes. We are experienced with Mul-T-Lock, Banham, Abloy, and ASSA ABLOY high-security lock installation across SE11." },
+    { question: "Can you install a lock on a garage door?", answer: "Yes. We install padlocks, hasp and staple sets, and dedicated garage door locking systems." },
+    { question: "How much does lock installation cost in SE11?", answer: "From £89 for a standard mortice or rim lock installation. Fixed price quoted before work begins — no call-out fee." },
+  ], "/services/lock-installation");
 
   return (
     <>
+      <SchemaMarkup schema={faqSchema} />
       <SchemaMarkup schema={webPageSchema} />
       <SchemaMarkup schema={serviceSchema} />
       <SchemaMarkup schema={breadcrumbSchema} />

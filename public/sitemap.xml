@@ -178,6 +178,36 @@
 
   <!-- Location pages -->
   <url>
+    <loc>https://lockstarlocksmithkennington.com/locations/oval</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.92</priority>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lockstarlocksmithkennington.com/locations/oval"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lockstarlocksmithkennington.com/locations/oval"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lockstarlocksmithkennington.com/locations/oval"/>
+  </url>
+
+  <url>
+    <loc>https://lockstarlocksmithkennington.com/locations/vauxhall</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.92</priority>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lockstarlocksmithkennington.com/locations/vauxhall"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lockstarlocksmithkennington.com/locations/vauxhall"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lockstarlocksmithkennington.com/locations/vauxhall"/>
+  </url>
+
+  <url>
+    <loc>https://lockstarlocksmithkennington.com/locations/elephant-and-castle</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.92</priority>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lockstarlocksmithkennington.com/locations/elephant-and-castle"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lockstarlocksmithkennington.com/locations/elephant-and-castle"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lockstarlocksmithkennington.com/locations/elephant-and-castle"/>
+  </url>
+
+  <url>
     <loc>https://lockstarlocksmithkennington.com/locations/kennington</loc>
     <lastmod>2025-06-01</lastmod>
     <changefreq>monthly</changefreq>

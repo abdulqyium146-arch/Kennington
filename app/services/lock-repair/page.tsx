@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Wrench } from "lucide-react";
 import ServicePageLayout from "@/components/ui/ServicePageLayout";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
-import { generateServiceSchema, generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/schema";
+import { generateServiceSchema, generateBreadcrumbSchema, generateWebPageSchema, generateFAQSchema } from "@/lib/schema";
 import { BUSINESS } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -42,9 +42,22 @@ export default function LockRepairPage() {
     { name: "Services", href: "/services" },
     { name: "Lock Repair", href: "/services/lock-repair" },
   ]);
+  const faqSchema = generateFAQSchema([
+    { question: "Can a stiff or jammed lock be repaired rather than replaced?", answer: "In many cases yes. We diagnose whether the lock can be cleaned, lubricated, and adjusted, or whether replacement is the more cost-effective solution." },
+    { question: "What causes a lock to become stiff or difficult to use?", answer: "Common causes include dirt accumulation in the keyway, door misalignment, worn internal components, or corrosion in older locks." },
+    { question: "My key will not turn in the lock — what is wrong?", answer: "This is usually caused by a lubrication issue, debris in the keyway, or worn pins inside the cylinder. We diagnose and resolve on the same visit." },
+    { question: "How long does a lock repair take in Kennington?", answer: "Typically 20–45 minutes depending on the fault type and lock mechanism." },
+    { question: "Is it better to repair or replace my lock?", answer: "It depends on the age and condition of the lock. We always provide an honest recommendation — we do not push unnecessary replacements." },
+    { question: "Can you repair a Yale rim lock?", answer: "Yes. We repair all common residential lock types including Yale rim locks, Chubb mortice deadlocks, and UPVC cylinders." },
+    { question: "Can you repair a lock that has been partially forced in a break-in?", answer: "Partially forced locks can sometimes be repaired. Fully damaged locks require replacement. We assess and advise honestly." },
+    { question: "Do you carry spare parts for common lock brands?", answer: "Yes. We carry parts for Yale, Chubb, ERA, and other common residential and commercial lock brands." },
+    { question: "Can you repair a smart lock that has stopped working?", answer: "Yes. We diagnose and repair most smart lock faults including mechanism failures, app connectivity issues, and cylinder problems." },
+    { question: "How much does a lock repair cost in SE11?", answer: "From £65 for a standard lock repair. Fixed price quoted before work begins — no call-out fee." },
+  ], "/services/lock-repair");
 
   return (
     <>
+      <SchemaMarkup schema={faqSchema} />
       <SchemaMarkup schema={webPageSchema} />
       <SchemaMarkup schema={serviceSchema} />
       <SchemaMarkup schema={breadcrumbSchema} />

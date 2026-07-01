@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Car } from "lucide-react";
 import ServicePageLayout from "@/components/ui/ServicePageLayout";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
-import { generateServiceSchema, generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/schema";
+import { generateServiceSchema, generateBreadcrumbSchema, generateWebPageSchema, generateFAQSchema } from "@/lib/schema";
 import { BUSINESS } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -42,9 +42,22 @@ export default function AutoLocksmithPage() {
     { name: "Services", href: "/services" },
     { name: "Auto Locksmith", href: "/services/auto-locksmith" },
   ]);
+  const faqSchema = generateFAQSchema([
+    { question: "What vehicles do you cover as an auto locksmith in Kennington?", answer: "We cover all makes and models of cars, vans, and motorcycles across SE11 and Greater London." },
+    { question: "Can you programme a replacement transponder key?", answer: "Yes. We programme transponder and remote key fobs for most vehicle makes and models." },
+    { question: "How quickly can you reach me if I am locked out of my car in SE11?", answer: "We aim to arrive within 20–30 minutes for vehicle lockouts across SE11 and surrounding postcodes." },
+    { question: "Is an auto locksmith cheaper than a main dealer for replacement keys?", answer: "Typically yes. Auto locksmith prices for key cutting and programming are usually 30–60% lower than main dealer replacement key costs." },
+    { question: "Can you open a car without causing damage?", answer: "Yes. We use non-destructive specialist tools to gain access to locked vehicles without scratching or damaging bodywork or windows." },
+    { question: "What if my key fob has stopped working?", answer: "We diagnose and resolve key fob issues including battery replacement, re-synchronisation, and full replacement programming." },
+    { question: "Do you cover keyless entry and push-button start vehicles?", answer: "Yes. We work with standard, transponder, and keyless entry systems." },
+    { question: "What should I do if my car key is stolen?", answer: "Call us immediately. We can re-programme your vehicle so stolen key codes are permanently invalidated." },
+    { question: "Do you provide mobile auto locksmith services — do you come to me?", answer: "Yes. We are fully mobile and attend your location across SE11 and Greater London." },
+    { question: "How much does an auto locksmith cost in Kennington?", answer: "Car lockout prices start from £69. Key cutting and programming from £129 depending on vehicle. Fixed price quoted before work." },
+  ], "/services/auto-locksmith");
 
   return (
     <>
+      <SchemaMarkup schema={faqSchema} />
       <SchemaMarkup schema={webPageSchema} />
       <SchemaMarkup schema={serviceSchema} />
       <SchemaMarkup schema={breadcrumbSchema} />

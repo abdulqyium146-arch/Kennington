@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { RotateCcw } from "lucide-react";
 import ServicePageLayout from "@/components/ui/ServicePageLayout";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
-import { generateServiceSchema, generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/schema";
+import { generateServiceSchema, generateBreadcrumbSchema, generateWebPageSchema, generateFAQSchema } from "@/lib/schema";
 import { BUSINESS } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -42,9 +42,22 @@ export default function LockReplacementPage() {
     { name: "Services", href: "/services" },
     { name: "Lock Replacement", href: "/services/lock-replacement" },
   ]);
+  const faqSchema = generateFAQSchema([
+    { question: "What British Standard locks do you supply and fit in Kennington?", answer: "We carry Yale, Chubb, ERA Fortress, Mul-T-Lock, Banham, and Abloy BS3621-approved deadlocks and cylinders." },
+    { question: "What is a BS3621 lock?", answer: "BS3621 is the British Standard for thief-resistant lock assemblies. It requires a minimum 20mm bolt throw, anti-drill protection, anti-pick pins, and 1000 key differs. Required by most UK home insurers." },
+    { question: "How do I know if my lock needs replacing?", answer: "Replace your lock if: it is difficult to operate, it is worn or corroded, after a lockout or burglary, after a tenancy change, or if it is more than 10 years old." },
+    { question: "Should I change my locks when I move into a new property?", answer: "Yes. You cannot know how many key copies exist from previous occupants. A lock change is the single most important security action when moving in." },
+    { question: "What is an anti-snap lock?", answer: "An anti-snap cylinder is engineered to shear at a designated point before the critical locking mechanism, preventing the cylinder-snapping burglary technique." },
+    { question: "How long does a lock replacement take in SE11?", answer: "A standard front door lock replacement takes 30–45 minutes. UPVC cylinder swaps are typically completed in under 30 minutes." },
+    { question: "Can you fit a new lock on any door type?", answer: "Yes. We work on all door types including timber, UPVC, composite, and fire doors." },
+    { question: "Can I supply my own lock for you to fit?", answer: "Yes. We can fit a lock you have purchased, though we cannot provide a product warranty in this case and cannot guarantee it meets insurance requirements." },
+    { question: "Do you fit smart lock cylinders?", answer: "Yes. We supply and fit Nuki, Ultion Smart, and Yale smart cylinder upgrades as well as traditional rim locks and mortice deadlocks." },
+    { question: "How much does a lock replacement cost in Kennington?", answer: "From £89 including a quality British Standard replacement lock. Fixed price quoted before work begins — no hidden charges." },
+  ], "/services/lock-replacement");
 
   return (
     <>
+      <SchemaMarkup schema={faqSchema} />
       <SchemaMarkup schema={webPageSchema} />
       <SchemaMarkup schema={serviceSchema} />
       <SchemaMarkup schema={breadcrumbSchema} />

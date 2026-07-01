@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ShieldCheck } from "lucide-react";
 import ServicePageLayout from "@/components/ui/ServicePageLayout";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
-import { generateServiceSchema, generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/schema";
+import { generateServiceSchema, generateBreadcrumbSchema, generateWebPageSchema, generateFAQSchema } from "@/lib/schema";
 import { BUSINESS } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -42,9 +42,22 @@ export default function SecurityUpgradesPage() {
     { name: "Services", href: "/services" },
     { name: "Security Upgrades", href: "/services/security-upgrades" },
   ]);
+  const faqSchema = generateFAQSchema([
+    { question: "What is an anti-snap cylinder and do I need one?", answer: "An anti-snap cylinder is engineered to shear at a designated break point before the locking mechanism can be reached, defeating cylinder-snapping — one of the most common UK residential burglary methods. Strongly recommended for all SE11 properties." },
+    { question: "What is cylinder snapping?", answer: "Cylinder snapping is a technique where cheap euro cylinders are broken off using pliers or a screwdriver, allowing the door to be opened in seconds. Anti-snap cylinders eliminate this vulnerability entirely." },
+    { question: "Do my locks need to meet home insurance requirements?", answer: "Most UK home insurers require BS3621-approved locks on all external doors. We advise specifically on what your insurer requires." },
+    { question: "Can you do a free home security survey in Kennington?", answer: "Yes. We offer a free security assessment for homes and businesses across SE11, identifying vulnerabilities and recommending cost-effective improvements." },
+    { question: "What security upgrades give the best return per pound spent?", answer: "Anti-snap cylinder upgrades typically provide the greatest security improvement per pound — a quality anti-snap cylinder costs approximately £69–£99 fitted, compared to the average burglary insurance excess of £250–£500." },
+    { question: "What door frame reinforcement do you install?", answer: "We fit steel door frame reinforcement plates, hinge bolt sets, security keeps, and London bar systems to significantly increase resistance to forced entry." },
+    { question: "What high-security cylinder brands do you install?", answer: "We install Mul-T-Lock, Banham, Abloy, ERA Fortress, Ultion, and Yale Platinum cylinders — all rated to Sold Secure or APS anti-snap standards." },
+    { question: "How much does an anti-snap cylinder upgrade cost in SE11?", answer: "From £69 per door for a quality anti-snap cylinder upgrade. Fixed price quoted before work." },
+    { question: "Can you upgrade security on a rented property?", answer: "Yes. With landlord permission, we carry out security upgrades on rental properties across SE11. We advise tenants to confirm with their landlord before instructing work." },
+    { question: "Is a security upgrade worth it in Kennington?", answer: "A professional anti-snap cylinder costs around £80 installed — considerably less than the typical burglary insurance excess of £250–£500, or the emotional impact of a break-in." },
+  ], "/services/security-upgrades");
 
   return (
     <>
+      <SchemaMarkup schema={faqSchema} />
       <SchemaMarkup schema={webPageSchema} />
       <SchemaMarkup schema={serviceSchema} />
       <SchemaMarkup schema={breadcrumbSchema} />

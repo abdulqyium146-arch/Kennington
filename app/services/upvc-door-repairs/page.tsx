@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { DoorOpen } from "lucide-react";
 import ServicePageLayout from "@/components/ui/ServicePageLayout";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
-import { generateServiceSchema, generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/schema";
+import { generateServiceSchema, generateBreadcrumbSchema, generateWebPageSchema, generateFAQSchema } from "@/lib/schema";
 import { BUSINESS } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -42,9 +42,22 @@ export default function UPVCDoorRepairsPage() {
     { name: "Services", href: "/services" },
     { name: "UPVC Door Repairs", href: "/services/upvc-door-repairs" },
   ]);
+  const faqSchema = generateFAQSchema([
+    { question: "Why will my UPVC door not close or lock properly?", answer: "Most UPVC door problems stem from a worn gearbox, a door that has dropped on its hinges, or a failed cylinder. We diagnose the exact fault and repair it on the same visit." },
+    { question: "What is a UPVC multipoint lock?", answer: "A multipoint locking system engages at multiple points along the door frame simultaneously, providing significantly more security than a single-point lock." },
+    { question: "Can you repair or replace a UPVC door gearbox?", answer: "Yes. We carry a comprehensive range of UPVC gearbox mechanisms for same-day replacement across SE11." },
+    { question: "How long does a UPVC lock repair take?", answer: "UPVC mechanism replacements typically take 45–90 minutes. Cylinder replacements are usually completed in under 30 minutes." },
+    { question: "Can you replace just the cylinder on my UPVC door?", answer: "Yes. UPVC cylinder replacement is our most common repair and takes under 30 minutes in most cases." },
+    { question: "My UPVC door handle has dropped — is this serious?", answer: "A dropped handle usually indicates a worn gearbox. The door may still lock in some scenarios but the mechanism should be replaced promptly to maintain security." },
+    { question: "Do you repair composite doors as well as UPVC?", answer: "Yes. We work on all composite and UPVC door types and carry mechanisms compatible with the most common brands." },
+    { question: "Can you repair a UPVC door damaged in a break-in?", answer: "Yes. We carry out post-burglary UPVC door repairs including gearbox, cylinder, and frame reinforcement." },
+    { question: "Why is my UPVC door hard to lift to lock?", answer: "Difficulty lifting the handle to engage the lock is a classic symptom of a worn gearbox. The mechanism needs replacing." },
+    { question: "How much does a UPVC door repair cost in Kennington?", answer: "Cylinder replacements from £75. Gearbox replacements from £129 depending on mechanism type. Fixed price quoted before work." },
+  ], "/services/upvc-door-repairs");
 
   return (
     <>
+      <SchemaMarkup schema={faqSchema} />
       <SchemaMarkup schema={webPageSchema} />
       <SchemaMarkup schema={serviceSchema} />
       <SchemaMarkup schema={breadcrumbSchema} />

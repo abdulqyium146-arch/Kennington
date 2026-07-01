@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Building2 } from "lucide-react";
 import ServicePageLayout from "@/components/ui/ServicePageLayout";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
-import { generateServiceSchema, generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/schema";
+import { generateServiceSchema, generateBreadcrumbSchema, generateWebPageSchema, generateFAQSchema } from "@/lib/schema";
 import { BUSINESS } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -42,9 +42,22 @@ export default function CommercialLocksmithPage() {
     { name: "Services", href: "/services" },
     { name: "Commercial Locksmith", href: "/services/commercial-locksmith" },
   ]);
+  const faqSchema = generateFAQSchema([
+    { question: "What types of commercial premises do you service in Kennington?", answer: "We service offices, retail stores, restaurants, warehouses, schools, healthcare premises, and letting agencies across SE11 and Greater London." },
+    { question: "Can you install a master key system for our office?", answer: "Yes. We design and install bespoke master key and grand master key systems tailored to your premises access requirements." },
+    { question: "What access control systems do you install?", answer: "We install keypad, fob, and smart card access control systems from leading commercial security brands." },
+    { question: "How quickly can you respond to a commercial lockout in SE11?", answer: "We offer priority emergency response for business clients targeting 20–30 minutes for SE11 postcodes." },
+    { question: "Do you offer maintenance contracts for commercial premises?", answer: "Yes. We provide planned maintenance contracts with priority emergency callout and a dedicated account manager." },
+    { question: "What high-security locks do you recommend for commercial use?", answer: "Abloy, Mul-T-Lock, and ASSA ABLOY commercial-grade cylinders provide maximum pick, drill, and snap resistance for business premises." },
+    { question: "Do you carry out security audits for businesses?", answer: "Yes. We provide comprehensive commercial security audits identifying vulnerabilities with a prioritised improvement plan." },
+    { question: "Can you change locks on a commercial premises at the end of a lease?", answer: "Yes. Commercial tenant lock changes are carried out same-day across SE11 and Greater London." },
+    { question: "How do I maintain key control across a multi-occupancy building?", answer: "A professionally designed master key system is the most effective solution, allowing granular access control without multiple keys." },
+    { question: "How much does a commercial lock change cost in Kennington?", answer: "From £99 for a standard commercial lock change. Fixed price quoted before work begins. Contract pricing available for ongoing clients." },
+  ], "/services/commercial-locksmith");
 
   return (
     <>
+      <SchemaMarkup schema={faqSchema} />
       <SchemaMarkup schema={webPageSchema} />
       <SchemaMarkup schema={serviceSchema} />
       <SchemaMarkup schema={breadcrumbSchema} />

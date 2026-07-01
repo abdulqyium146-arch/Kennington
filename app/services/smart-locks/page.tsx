@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Cpu } from "lucide-react";
 import ServicePageLayout from "@/components/ui/ServicePageLayout";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
-import { generateServiceSchema, generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/schema";
+import { generateServiceSchema, generateBreadcrumbSchema, generateWebPageSchema, generateFAQSchema } from "@/lib/schema";
 import { BUSINESS } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -42,9 +42,22 @@ export default function SmartLocksPage() {
     { name: "Services", href: "/services" },
     { name: "Smart Locks", href: "/services/smart-locks" },
   ]);
+  const faqSchema = generateFAQSchema([
+    { question: "What smart lock brands do you install in Kennington?", answer: "We install Yale, Nuki, Ultion Smart, Samsung, Schlage, and ASSA ABLOY smart locks across SE11 and Greater London." },
+    { question: "Can a smart lock retrofit into my existing door without changes?", answer: "Yes. Smart cylinder replacements such as Nuki and Ultion Smart fit the existing cylinder hole and work with your current door handle and lock body." },
+    { question: "Is a smart lock as secure as a traditional lock?", answer: "A quality smart lock from a reputable brand provides equivalent mechanical security plus additional digital access features. We only install smart locks that meet appropriate security standards." },
+    { question: "Can I install a smart lock on a UPVC door?", answer: "Yes for most UPVC door types. We assess door compatibility before recommending a specific smart lock product." },
+    { question: "How does a smart keypad lock work?", answer: "A keypad lock allows entry via a numeric code, eliminating the need for a physical key. Multiple codes can be set for different users and time-restricted codes can be issued for guests." },
+    { question: "Can I manage my smart lock remotely from my phone?", answer: "Yes. App-controlled smart locks allow you to lock and unlock remotely, monitor entry activity, and issue or revoke digital access codes from anywhere." },
+    { question: "What happens if the smart lock battery dies?", answer: "Most quality smart locks include a physical key override or an emergency USB power option allowing entry even when the battery is flat." },
+    { question: "Are smart locks suitable for Airbnb and short-let properties?", answer: "Yes. Smart locks are ideal for rental properties — they allow time-limited digital access codes for guests, eliminating the need for physical key handover and collection." },
+    { question: "What is the battery life of a typical smart lock?", answer: "Most quality smart locks have a battery life of 6–12 months. Low-battery alerts are sent via the app before the battery is depleted." },
+    { question: "How much does smart lock installation cost in SE11?", answer: "Smart cylinder upgrades from £149 installed. Full keypad smart locks from £199 installed. Fixed price quoted before work begins." },
+  ], "/services/smart-locks");
 
   return (
     <>
+      <SchemaMarkup schema={faqSchema} />
       <SchemaMarkup schema={webPageSchema} />
       <SchemaMarkup schema={serviceSchema} />
       <SchemaMarkup schema={breadcrumbSchema} />

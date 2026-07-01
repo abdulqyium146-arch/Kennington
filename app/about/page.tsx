@@ -11,13 +11,21 @@ import {
   MapPin,
 } from "lucide-react";
 import { BUSINESS } from "@/lib/constants";
+import SchemaMarkup from "@/components/ui/SchemaMarkup";
+import { generateWebPageSchema, generateBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "About Lockstar Locksmith Kennington | Local DBS Checked Locksmiths",
   description:
     "Learn about Lockstar Locksmith Kennington — your trusted local locksmith in SE11. DBS checked, fully insured, serving Kennington since 2015. Call " +
     BUSINESS.phone,
-  alternates: { canonical: "/about" },
+  alternates: {
+    canonical: "/about",
+    languages: {
+      "en-GB": "https://lockstarlocksmithkennington.com/about",
+      "en": "https://lockstarlocksmithkennington.com/about",
+    },
+  },
 };
 
 const values = [
@@ -48,8 +56,22 @@ const values = [
 ];
 
 export default function AboutPage() {
+  const webPageSchema = generateWebPageSchema({
+    title: "About Lockstar Locksmith Kennington | Local DBS Checked Locksmiths",
+    description:
+      "Learn about Lockstar Locksmith Kennington — your trusted local locksmith in SE11. DBS checked, fully insured, serving Kennington since 2015.",
+    url: "/about",
+    datePublished: "2025-01-15",
+    dateModified: "2025-06-01",
+  });
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "About", href: "/about" },
+  ]);
+
   return (
     <>
+      <SchemaMarkup schema={webPageSchema} />
+      <SchemaMarkup schema={breadcrumbSchema} />
       {/* Hero */}
       <section className="gradient-hero text-white py-16 md:py-24">
         <div className="container-main">

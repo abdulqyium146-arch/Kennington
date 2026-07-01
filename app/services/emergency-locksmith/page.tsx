@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Zap } from "lucide-react";
 import ServicePageLayout from "@/components/ui/ServicePageLayout";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
-import { generateServiceSchema, generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/schema";
+import { generateServiceSchema, generateBreadcrumbSchema, generateWebPageSchema, generateFAQSchema } from "@/lib/schema";
 import { BUSINESS } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -42,9 +42,22 @@ export default function EmergencyLocksmithPage() {
     { name: "Services", href: "/services" },
     { name: "Emergency Locksmith", href: "/services/emergency-locksmith" },
   ]);
+  const faqSchema = generateFAQSchema([
+    { question: "How quickly can a locksmith reach Kennington?", answer: "Our average response time across SE11 is 20–30 minutes from your call, 24 hours a day including bank holidays." },
+    { question: "How much does an emergency locksmith cost in SE11?", answer: "Prices start from £69 for a standard lockout. A fixed price is quoted before any work begins — no hidden fees, no call-out charge." },
+    { question: "Is there a call-out fee for an emergency locksmith in Kennington?", answer: "No. Lockstar Locksmith Kennington charges no call-out fee. The price quoted before work starts is the price you pay." },
+    { question: "Do you work on Christmas Day and bank holidays?", answer: "Yes. We operate 24/7/365 including Christmas Day and all UK bank holidays at no extra charge." },
+    { question: "Can a locksmith open my door without drilling?", answer: "Yes, in the vast majority of cases. We use non-destructive picking and decoding techniques and only drill as a last resort after explaining the situation." },
+    { question: "What is non-destructive entry?", answer: "Non-destructive entry is the use of professional lock-picking and decoding techniques to open a locked door without damaging the lock or door frame." },
+    { question: "My key broke in the lock — what should I do?", answer: "Call us immediately. We extract broken keys using specialist tools and replace the cylinder if required, usually without drilling." },
+    { question: "Are your locksmiths DBS checked?", answer: "Yes. Every Lockstar technician holds a current DBS (Disclosure and Barring Service) certificate and carries public liability insurance." },
+    { question: "Can you open a UPVC door?", answer: "Yes. We work on all UPVC multipoint locking systems and UPVC cylinders." },
+    { question: "What should I do after a burglary in Kennington?", answer: "Call 999 first if you feel unsafe. Once safe, call Lockstar for emergency boarding up, temporary security, and same-visit permanent lock replacement." },
+  ], "/services/emergency-locksmith");
 
   return (
     <>
+      <SchemaMarkup schema={faqSchema} />
       <SchemaMarkup schema={webPageSchema} />
       <SchemaMarkup schema={serviceSchema} />
       <SchemaMarkup schema={breadcrumbSchema} />

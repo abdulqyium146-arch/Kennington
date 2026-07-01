@@ -30,6 +30,27 @@ const locations = [
     primary: true,
   },
   {
+    name: "Oval",
+    postcode: "SE11",
+    href: "/locations/oval",
+    description: "Locksmith serving the Oval area — same SE11 postcode, rapid response.",
+    primary: true,
+  },
+  {
+    name: "Vauxhall",
+    postcode: "SE11 / SW8",
+    href: "/locations/vauxhall",
+    description: "Serving Vauxhall's Victorian streets and modern apartment developments.",
+    primary: false,
+  },
+  {
+    name: "Elephant & Castle",
+    postcode: "SE1 / SE17",
+    href: "/locations/elephant-and-castle",
+    description: "Fast locksmith response for SE1 and SE17 — minutes from our base.",
+    primary: false,
+  },
+  {
     name: "Kennington Road",
     postcode: "SE11",
     href: "/locations/kennington-road",

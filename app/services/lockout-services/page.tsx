@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { KeyRound } from "lucide-react";
 import ServicePageLayout from "@/components/ui/ServicePageLayout";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
-import { generateServiceSchema, generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/schema";
+import { generateServiceSchema, generateBreadcrumbSchema, generateWebPageSchema, generateFAQSchema } from "@/lib/schema";
 import { BUSINESS } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -42,9 +42,22 @@ export default function LockoutServicesPage() {
     { name: "Services", href: "/services" },
     { name: "Lockout Services", href: "/services/lockout-services" },
   ]);
+  const faqSchema = generateFAQSchema([
+    { question: "How quickly can you reach me if I am locked out in SE11?", answer: "We aim to arrive within 20–30 minutes for all SE11 postcodes including Kennington, Oval, Vauxhall, and Elephant and Castle." },
+    { question: "Can you open my door without breaking the lock?", answer: "Yes. Non-destructive entry is always our first approach. We successfully open the vast majority of residential locks without any damage." },
+    { question: "What if my lock cannot be picked?", answer: "We explain the situation and obtain your approval before any destructive method. The lock is then replaced on the same visit." },
+    { question: "I have lost my keys — what should I do?", answer: "Call us. We gain entry and strongly recommend a same-visit lock change to restore full key control over your property." },
+    { question: "My keys are locked inside — can you help?", answer: "Yes. Keys visible through a letterbox or left inside is one of our most common call-out scenarios. We gain entry without damage in almost all cases." },
+    { question: "Do you charge more for out-of-hours lockouts?", answer: "No. Our prices are the same 24 hours a day, 7 days a week. No extra charge for nights, weekends, or bank holidays." },
+    { question: "What proof of residency do you require?", answer: "We ask for a form of ID such as a driving licence or utility bill showing the address. This protects both you and us." },
+    { question: "Can you open a high-security Banham or Mul-T-Lock?", answer: "Yes. Our locksmiths are trained to work with Banham, Mul-T-Lock, and Abloy high-security locks. Most can be opened non-destructively." },
+    { question: "Should I change my lock after a lockout?", answer: "We recommend a lock change if keys may have been copied, stolen, or if your key security is compromised in any way. We carry out lock changes on the same visit." },
+    { question: "How much does a lockout service cost in Kennington?", answer: "Prices start from £69 for a standard residential lockout. Fixed price quoted before work begins with no call-out fee." },
+  ], "/services/lockout-services");
 
   return (
     <>
+      <SchemaMarkup schema={faqSchema} />
       <SchemaMarkup schema={webPageSchema} />
       <SchemaMarkup schema={serviceSchema} />
       <SchemaMarkup schema={breadcrumbSchema} />

@@ -96,7 +96,7 @@ export function generateOrganizationSchema() {
 export function generateLocalBusinessSchema() {
   return {
     "@context": "https://schema.org",
-    "@type": ["Locksmith", "LocalBusiness", "HomeAndConstructionBusiness"],
+    "@type": ["Locksmith", "LocalBusiness", "EmergencyService", "HomeAndConstructionBusiness"],
     "@id": IDS.business,
     name: BUSINESS.name,
     alternateName: BUSINESS.shortName,
@@ -207,12 +207,13 @@ export function generateLocalBusinessSchema() {
 
 // ─── FAQ Schema ───────────────────────────────────────────────────────────────
 export function generateFAQSchema(
-  faqs: Array<{ question: string; answer: string }>
+  faqs: Array<{ question: string; answer: string }>,
+  pageUrl?: string
 ) {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "@id": `${DOMAIN}/#faq`,
+    "@id": pageUrl ? `${DOMAIN}${pageUrl}#faq` : `${DOMAIN}/#faq`,
     mainEntity: faqs.map((faq) => ({
       "@type": "Question",
       name: faq.question,
