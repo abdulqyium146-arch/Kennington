@@ -2,24 +2,37 @@ import type { Metadata } from "next";
 import { MapPin } from "lucide-react";
 import LocationPageLayout from "@/components/ui/LocationPageLayout";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
-import { generateLocalBusinessSchema, generateBreadcrumbSchema } from "@/lib/schema";
+import { generateLocalBusinessSchema, generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/schema";
 import { BUSINESS } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Locksmith Kennington SE11 | 24/7 Emergency Locksmith SE11",
+  title: "Locksmith Kennington SE11 | 24/7 Local Locksmith",
   description:
-    "Locksmith in Kennington SE11, London. Emergency lockouts, lock repair, UPVC repairs. Call " +
-    BUSINESS.phone +
-    ". DBS checked, 20–30 min response. Serving all SE11 postcodes.",
-  alternates: { canonical: "/locations/kennington-se11" },
+    "Locksmith covering all SE11 postcodes. Emergency lockouts, lock fitting & repairs. Call 07700 900000. DBS checked, 20–30 min response, no call-out fee.",
+  alternates: {
+    canonical: "/locations/kennington-se11",
+    languages: {
+      "en-GB": "https://lockstarlocksmithkennington.com/locations/kennington-se11",
+      "en": "https://lockstarlocksmithkennington.com/locations/kennington-se11",
+    },
+  },
   openGraph: {
     title: "Locksmith Kennington SE11 | 24/7 Local Locksmith",
     description:
-      "Emergency locksmith serving all SE11 postcodes. 20–30 min response. Call " + BUSINESS.phone,
+      "Locksmith covering all SE11 postcodes. Emergency lockouts, lock fitting & repairs. Call 07700 900000. DBS checked, 20–30 min response, no call-out fee.",
+    url: "https://lockstarlocksmithkennington.com/locations/kennington-se11",
   },
 };
 
 export default function KenningtionSE11Page() {
+  const webPageSchema = generateWebPageSchema({
+    title: "Locksmith Kennington SE11 | 24/7 Local Locksmith",
+    description:
+      "Locksmith covering all SE11 postcodes. Emergency lockouts, lock fitting & repairs. Call 07700 900000. DBS checked, 20–30 min response, no call-out fee.",
+    url: "/locations/kennington-se11",
+    datePublished: "2025-01-15",
+    dateModified: "2025-06-01",
+  });
   const businessSchema = generateLocalBusinessSchema();
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: "Locations", href: "/locations" },
@@ -28,6 +41,7 @@ export default function KenningtionSE11Page() {
 
   return (
     <>
+      <SchemaMarkup schema={webPageSchema} />
       <SchemaMarkup schema={businessSchema} />
       <SchemaMarkup schema={breadcrumbSchema} />
       <LocationPageLayout

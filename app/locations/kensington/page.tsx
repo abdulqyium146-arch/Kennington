@@ -2,15 +2,13 @@ import type { Metadata } from "next";
 import { MapPin } from "lucide-react";
 import LocationPageLayout from "@/components/ui/LocationPageLayout";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
-import { generateLocalBusinessSchema, generateBreadcrumbSchema } from "@/lib/schema";
+import { generateLocalBusinessSchema, generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/schema";
 import { BUSINESS } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Locksmith Kensington | 24/7 Emergency Locksmith W8 SW7",
+  title: "Locksmith Kensington | 24/7 Emergency W8 SW7",
   description:
-    "Locksmith in Kensington, W8 & SW7. Emergency lockouts, high-security locks, premium residential locksmith services. Call " +
-    BUSINESS.phone +
-    ". DBS checked, fast response.",
+    "Locksmith in Kensington W8 & SW7. High-security locks, emergency lockouts & premium residential service. Call 07700 900000. DBS checked, fast response.",
   keywords: [
     "locksmith kensington",
     "kensington locksmith",
@@ -19,10 +17,30 @@ export const metadata: Metadata = {
     "locksmith sw7",
     "security kensington",
   ],
-  alternates: { canonical: "/locations/kensington" },
+  alternates: {
+    canonical: "/locations/kensington",
+    languages: {
+      "en-GB": "https://lockstarlocksmithkennington.com/locations/kensington",
+      "en": "https://lockstarlocksmithkennington.com/locations/kensington",
+    },
+  },
+  openGraph: {
+    title: "Locksmith Kensington | 24/7 Emergency W8 SW7",
+    description:
+      "Locksmith in Kensington W8 & SW7. High-security locks, emergency lockouts & premium residential service. Call 07700 900000. DBS checked, fast response.",
+    url: "https://lockstarlocksmithkennington.com/locations/kensington",
+  },
 };
 
 export default function KensingtonPage() {
+  const webPageSchema = generateWebPageSchema({
+    title: "Locksmith Kensington | 24/7 Emergency W8 SW7",
+    description:
+      "Locksmith in Kensington W8 & SW7. High-security locks, emergency lockouts & premium residential service. Call 07700 900000. DBS checked, fast response.",
+    url: "/locations/kensington",
+    datePublished: "2025-01-15",
+    dateModified: "2025-06-01",
+  });
   const businessSchema = generateLocalBusinessSchema();
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: "Locations", href: "/locations" },
@@ -31,6 +49,7 @@ export default function KensingtonPage() {
 
   return (
     <>
+      <SchemaMarkup schema={webPageSchema} />
       <SchemaMarkup schema={businessSchema} />
       <SchemaMarkup schema={breadcrumbSchema} />
       <LocationPageLayout

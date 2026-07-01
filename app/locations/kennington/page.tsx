@@ -2,24 +2,37 @@ import type { Metadata } from "next";
 import { MapPin } from "lucide-react";
 import LocationPageLayout from "@/components/ui/LocationPageLayout";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
-import { generateLocalBusinessSchema, generateBreadcrumbSchema } from "@/lib/schema";
+import { generateLocalBusinessSchema, generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/schema";
 import { BUSINESS } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Locksmith Kennington | 24/7 Emergency Locksmith SE11",
+  title: "Locksmith Kennington | 24/7 Emergency SE11",
   description:
-    "Locksmith in Kennington, London SE11. Emergency lockouts, lock fitting, burglary repairs. Call " +
-    BUSINESS.phone +
-    ". DBS checked, 20–30 min response, no call-out fee.",
-  alternates: { canonical: "/locations/kennington" },
+    "Locksmith in Kennington SE11. 24/7 emergency lockouts, lock fitting & burglary repairs. Call 07700 900000. DBS checked, 20–30 min response, no call-out fee.",
+  alternates: {
+    canonical: "/locations/kennington",
+    languages: {
+      "en-GB": "https://lockstarlocksmithkennington.com/locations/kennington",
+      "en": "https://lockstarlocksmithkennington.com/locations/kennington",
+    },
+  },
   openGraph: {
-    title: "Locksmith Kennington | 24/7 Local Locksmith SE11",
+    title: "Locksmith Kennington | 24/7 Emergency SE11",
     description:
-      "Your local emergency locksmith in Kennington SE11. 20–30 min response. Call " + BUSINESS.phone,
+      "Locksmith in Kennington SE11. 24/7 emergency lockouts, lock fitting & burglary repairs. Call 07700 900000. DBS checked, 20–30 min response, no call-out fee.",
+    url: "https://lockstarlocksmithkennington.com/locations/kennington",
   },
 };
 
 export default function KenningtonPage() {
+  const webPageSchema = generateWebPageSchema({
+    title: "Locksmith Kennington | 24/7 Emergency SE11",
+    description:
+      "Locksmith in Kennington SE11. 24/7 emergency lockouts, lock fitting & burglary repairs. Call 07700 900000. DBS checked, 20–30 min response, no call-out fee.",
+    url: "/locations/kennington",
+    datePublished: "2025-01-15",
+    dateModified: "2025-06-01",
+  });
   const businessSchema = generateLocalBusinessSchema();
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: "Locations", href: "/locations" },
@@ -28,6 +41,7 @@ export default function KenningtonPage() {
 
   return (
     <>
+      <SchemaMarkup schema={webPageSchema} />
       <SchemaMarkup schema={businessSchema} />
       <SchemaMarkup schema={breadcrumbSchema} />
       <LocationPageLayout

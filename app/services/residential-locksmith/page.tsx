@@ -2,19 +2,37 @@ import type { Metadata } from "next";
 import { Home } from "lucide-react";
 import ServicePageLayout from "@/components/ui/ServicePageLayout";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
-import { generateServiceSchema, generateBreadcrumbSchema } from "@/lib/schema";
+import { generateServiceSchema, generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/schema";
 import { BUSINESS } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Residential Locksmith Kennington | Home Lock Services SE11",
+  title: "Residential Locksmith Kennington | Home Locks SE11",
   description:
-    "Residential locksmith in Kennington SE11. Lock fitting, replacement & repair for homes and flats. Call " +
-    BUSINESS.phone +
-    ". DBS checked, insured, 24/7.",
-  alternates: { canonical: "/services/residential-locksmith" },
+    "Residential locksmith in Kennington SE11. Lock fitting, replacement & repair for houses and flats. Call 07700 900000. DBS checked, insured, 24/7 available.",
+  alternates: {
+    canonical: "/services/residential-locksmith",
+    languages: {
+      "en-GB": "https://lockstarlocksmithkennington.com/services/residential-locksmith",
+      "en": "https://lockstarlocksmithkennington.com/services/residential-locksmith",
+    },
+  },
+  openGraph: {
+    title: "Residential Locksmith Kennington | Home Locks SE11",
+    description:
+      "Residential locksmith in Kennington SE11. Lock fitting, replacement & repair for houses and flats. Call 07700 900000. DBS checked, insured, 24/7 available.",
+    url: "https://lockstarlocksmithkennington.com/services/residential-locksmith",
+  },
 };
 
 export default function ResidentialLocksmithPage() {
+  const webPageSchema = generateWebPageSchema({
+    title: "Residential Locksmith Kennington | Home Locks SE11",
+    description:
+      "Residential locksmith in Kennington SE11. Lock fitting, replacement & repair for houses and flats. Call 07700 900000. DBS checked, insured, 24/7 available.",
+    url: "/services/residential-locksmith",
+    datePublished: "2025-01-15",
+    dateModified: "2025-06-01",
+  });
   const serviceSchema = generateServiceSchema(
     "Residential Locksmith Kennington",
     "Residential locksmith services in Kennington SE11. Home lockouts, lock fitting, replacement and security upgrades.",
@@ -27,6 +45,7 @@ export default function ResidentialLocksmithPage() {
 
   return (
     <>
+      <SchemaMarkup schema={webPageSchema} />
       <SchemaMarkup schema={serviceSchema} />
       <SchemaMarkup schema={breadcrumbSchema} />
       <ServicePageLayout

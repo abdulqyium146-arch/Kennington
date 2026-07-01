@@ -2,19 +2,37 @@ import type { Metadata } from "next";
 import { Cpu } from "lucide-react";
 import ServicePageLayout from "@/components/ui/ServicePageLayout";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
-import { generateServiceSchema, generateBreadcrumbSchema } from "@/lib/schema";
+import { generateServiceSchema, generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/schema";
 import { BUSINESS } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Smart Locks Kennington | Keypad & App Lock Installation SE11",
+  title: "Smart Locks Kennington | Keypad & App Locks SE11",
   description:
-    "Smart lock installation in Kennington SE11. Keypad, Bluetooth, and app-controlled locks installed. Call " +
-    BUSINESS.phone +
-    ". All major brands. Expert fitting.",
-  alternates: { canonical: "/services/smart-locks" },
+    "Smart lock installation in Kennington SE11. Keypad, Bluetooth & app-controlled locks fitted. All major brands. Call 07700 900000. Expert fitting & setup.",
+  alternates: {
+    canonical: "/services/smart-locks",
+    languages: {
+      "en-GB": "https://lockstarlocksmithkennington.com/services/smart-locks",
+      "en": "https://lockstarlocksmithkennington.com/services/smart-locks",
+    },
+  },
+  openGraph: {
+    title: "Smart Locks Kennington | Keypad & App Locks SE11",
+    description:
+      "Smart lock installation in Kennington SE11. Keypad, Bluetooth & app-controlled locks fitted. All major brands. Call 07700 900000. Expert fitting & setup.",
+    url: "https://lockstarlocksmithkennington.com/services/smart-locks",
+  },
 };
 
 export default function SmartLocksPage() {
+  const webPageSchema = generateWebPageSchema({
+    title: "Smart Locks Kennington | Keypad & App Locks SE11",
+    description:
+      "Smart lock installation in Kennington SE11. Keypad, Bluetooth & app-controlled locks fitted. All major brands. Call 07700 900000. Expert fitting & setup.",
+    url: "/services/smart-locks",
+    datePublished: "2025-01-15",
+    dateModified: "2025-06-01",
+  });
   const serviceSchema = generateServiceSchema(
     "Smart Locks Kennington",
     "Smart lock installation service in Kennington SE11. Keypad, Bluetooth, and app-controlled smart locks fitted by experts.",
@@ -27,6 +45,7 @@ export default function SmartLocksPage() {
 
   return (
     <>
+      <SchemaMarkup schema={webPageSchema} />
       <SchemaMarkup schema={serviceSchema} />
       <SchemaMarkup schema={breadcrumbSchema} />
       <ServicePageLayout

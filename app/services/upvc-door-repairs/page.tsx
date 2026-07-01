@@ -2,19 +2,37 @@ import type { Metadata } from "next";
 import { DoorOpen } from "lucide-react";
 import ServicePageLayout from "@/components/ui/ServicePageLayout";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
-import { generateServiceSchema, generateBreadcrumbSchema } from "@/lib/schema";
+import { generateServiceSchema, generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/schema";
 import { BUSINESS } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "UPVC Door Repairs Kennington | Multipoint Lock Repair SE11",
+  title: "UPVC Door Repairs Kennington | Multipoint SE11",
   description:
-    "UPVC door repairs in Kennington SE11. Multipoint lock mechanisms, handles, and barrels replaced. Call " +
-    BUSINESS.phone +
-    ". Same-day UPVC repair service.",
-  alternates: { canonical: "/services/upvc-door-repairs" },
+    "UPVC door repairs in Kennington SE11. Multipoint gearboxes, handles, cylinders & hinges replaced. Call 07700 900000. Same-day UPVC specialist service.",
+  alternates: {
+    canonical: "/services/upvc-door-repairs",
+    languages: {
+      "en-GB": "https://lockstarlocksmithkennington.com/services/upvc-door-repairs",
+      "en": "https://lockstarlocksmithkennington.com/services/upvc-door-repairs",
+    },
+  },
+  openGraph: {
+    title: "UPVC Door Repairs Kennington | Multipoint SE11",
+    description:
+      "UPVC door repairs in Kennington SE11. Multipoint gearboxes, handles, cylinders & hinges replaced. Call 07700 900000. Same-day UPVC specialist service.",
+    url: "https://lockstarlocksmithkennington.com/services/upvc-door-repairs",
+  },
 };
 
 export default function UPVCDoorRepairsPage() {
+  const webPageSchema = generateWebPageSchema({
+    title: "UPVC Door Repairs Kennington | Multipoint SE11",
+    description:
+      "UPVC door repairs in Kennington SE11. Multipoint gearboxes, handles, cylinders & hinges replaced. Call 07700 900000. Same-day UPVC specialist service.",
+    url: "/services/upvc-door-repairs",
+    datePublished: "2025-01-15",
+    dateModified: "2025-06-01",
+  });
   const serviceSchema = generateServiceSchema(
     "UPVC Door Repairs Kennington",
     "UPVC door repair service in Kennington SE11. Multipoint lock mechanisms, handles, barrels, and hinges repaired and replaced.",
@@ -27,6 +45,7 @@ export default function UPVCDoorRepairsPage() {
 
   return (
     <>
+      <SchemaMarkup schema={webPageSchema} />
       <SchemaMarkup schema={serviceSchema} />
       <SchemaMarkup schema={breadcrumbSchema} />
       <ServicePageLayout

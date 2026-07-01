@@ -2,19 +2,37 @@ import type { Metadata } from "next";
 import { MapPin } from "lucide-react";
 import LocationPageLayout from "@/components/ui/LocationPageLayout";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
-import { generateLocalBusinessSchema, generateBreadcrumbSchema } from "@/lib/schema";
+import { generateLocalBusinessSchema, generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/schema";
 import { BUSINESS } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Locksmith Kennington Road | 24/7 Locksmith Service SE11",
+  title: "Locksmith Kennington Road SE11 | 24/7 Service",
   description:
-    "Locksmith on Kennington Road, SE11. Emergency lockouts, lock fitting & repair. Call " +
-    BUSINESS.phone +
-    ". DBS checked, 20 min response, no call-out fee. Serving Kennington Road and surrounding streets.",
-  alternates: { canonical: "/locations/kennington-road" },
+    "Locksmith on Kennington Road SE11. Emergency lockouts, lock fitting & security upgrades. Call 07700 900000. DBS checked, fast local response, no call-out fee.",
+  alternates: {
+    canonical: "/locations/kennington-road",
+    languages: {
+      "en-GB": "https://lockstarlocksmithkennington.com/locations/kennington-road",
+      "en": "https://lockstarlocksmithkennington.com/locations/kennington-road",
+    },
+  },
+  openGraph: {
+    title: "Locksmith Kennington Road SE11 | 24/7 Service",
+    description:
+      "Locksmith on Kennington Road SE11. Emergency lockouts, lock fitting & security upgrades. Call 07700 900000. DBS checked, fast local response, no call-out fee.",
+    url: "https://lockstarlocksmithkennington.com/locations/kennington-road",
+  },
 };
 
 export default function KenningtonRoadPage() {
+  const webPageSchema = generateWebPageSchema({
+    title: "Locksmith Kennington Road SE11 | 24/7 Service",
+    description:
+      "Locksmith on Kennington Road SE11. Emergency lockouts, lock fitting & security upgrades. Call 07700 900000. DBS checked, fast local response, no call-out fee.",
+    url: "/locations/kennington-road",
+    datePublished: "2025-01-15",
+    dateModified: "2025-06-01",
+  });
   const businessSchema = generateLocalBusinessSchema();
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: "Locations", href: "/locations" },
@@ -23,6 +41,7 @@ export default function KenningtonRoadPage() {
 
   return (
     <>
+      <SchemaMarkup schema={webPageSchema} />
       <SchemaMarkup schema={businessSchema} />
       <SchemaMarkup schema={breadcrumbSchema} />
       <LocationPageLayout

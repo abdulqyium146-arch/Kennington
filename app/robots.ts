@@ -1,16 +1,39 @@
 import { MetadataRoute } from "next";
-import { BUSINESS } from "@/lib/constants";
+
+const DOMAIN = "https://lockstarlocksmithkennington.com";
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
         userAgent: "*",
-        allow: "/",
-        disallow: ["/api/", "/_next/", "/admin/"],
+        allow: ["/"],
+        disallow: [
+          "/api/",
+          "/_next/",
+          "/admin/",
+          "/*?*",          // block query strings to prevent duplicate content
+          "/cdn-cgi/",
+        ],
+      },
+      {
+        userAgent: "AhrefsBot",
+        disallow: ["/"],
+      },
+      {
+        userAgent: "SemrushBot",
+        disallow: ["/"],
+      },
+      {
+        userAgent: "MJ12bot",
+        disallow: ["/"],
+      },
+      {
+        userAgent: "DotBot",
+        disallow: ["/"],
       },
     ],
-    sitemap: `${BUSINESS.domain}/sitemap.xml`,
-    host: BUSINESS.domain,
+    sitemap: `${DOMAIN}/sitemap.xml`,
+    host: DOMAIN,
   };
 }

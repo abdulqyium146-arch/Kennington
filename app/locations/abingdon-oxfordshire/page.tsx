@@ -2,15 +2,13 @@ import type { Metadata } from "next";
 import { MapPin } from "lucide-react";
 import LocationPageLayout from "@/components/ui/LocationPageLayout";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
-import { generateLocalBusinessSchema, generateBreadcrumbSchema } from "@/lib/schema";
+import { generateLocalBusinessSchema, generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/schema";
 import { BUSINESS } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Locksmith Abingdon Oxfordshire | 24/7 Locksmith Service",
+  title: "Locksmith Abingdon Oxfordshire | 24/7 OX14",
   description:
-    "Locksmith in Abingdon, Oxfordshire. Emergency lockouts, lock fitting & repair. Call " +
-    BUSINESS.phone +
-    ". DBS checked, fast response, no call-out fee. Serving Abingdon and surrounding Oxfordshire villages.",
+    "Locksmith in Abingdon, Oxfordshire OX14. Emergency lockouts, lock fitting & UPVC repairs. Call 07700 900000. DBS checked, fast response, no call-out fee.",
   keywords: [
     "locksmith abingdon",
     "locksmith abingdon oxfordshire",
@@ -18,10 +16,30 @@ export const metadata: Metadata = {
     "emergency locksmith abingdon",
     "locksmith oxfordshire",
   ],
-  alternates: { canonical: "/locations/abingdon-oxfordshire" },
+  alternates: {
+    canonical: "/locations/abingdon-oxfordshire",
+    languages: {
+      "en-GB": "https://lockstarlocksmithkennington.com/locations/abingdon-oxfordshire",
+      "en": "https://lockstarlocksmithkennington.com/locations/abingdon-oxfordshire",
+    },
+  },
+  openGraph: {
+    title: "Locksmith Abingdon Oxfordshire | 24/7 OX14",
+    description:
+      "Locksmith in Abingdon, Oxfordshire OX14. Emergency lockouts, lock fitting & UPVC repairs. Call 07700 900000. DBS checked, fast response, no call-out fee.",
+    url: "https://lockstarlocksmithkennington.com/locations/abingdon-oxfordshire",
+  },
 };
 
 export default function AbingdonOxfordshirePage() {
+  const webPageSchema = generateWebPageSchema({
+    title: "Locksmith Abingdon Oxfordshire | 24/7 OX14",
+    description:
+      "Locksmith in Abingdon, Oxfordshire OX14. Emergency lockouts, lock fitting & UPVC repairs. Call 07700 900000. DBS checked, fast response, no call-out fee.",
+    url: "/locations/abingdon-oxfordshire",
+    datePublished: "2025-01-15",
+    dateModified: "2025-06-01",
+  });
   const businessSchema = generateLocalBusinessSchema();
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: "Locations", href: "/locations" },
@@ -30,6 +48,7 @@ export default function AbingdonOxfordshirePage() {
 
   return (
     <>
+      <SchemaMarkup schema={webPageSchema} />
       <SchemaMarkup schema={businessSchema} />
       <SchemaMarkup schema={breadcrumbSchema} />
       <LocationPageLayout

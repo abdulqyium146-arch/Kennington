@@ -2,19 +2,37 @@ import type { Metadata } from "next";
 import { Wrench } from "lucide-react";
 import ServicePageLayout from "@/components/ui/ServicePageLayout";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
-import { generateServiceSchema, generateBreadcrumbSchema } from "@/lib/schema";
+import { generateServiceSchema, generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/schema";
 import { BUSINESS } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Lock Repair Kennington | Stiff & Faulty Locks Fixed SE11",
+  title: "Lock Repair Kennington | Stiff & Faulty Locks SE11",
   description:
-    "Lock repair in Kennington SE11. Stiff, jammed, or faulty locks diagnosed and repaired. Call " +
-    BUSINESS.phone +
-    ". Same-day repair service, all lock types.",
-  alternates: { canonical: "/services/lock-repair" },
+    "Lock repair in Kennington SE11. Stiff, jammed or faulty locks diagnosed and fixed. UPVC multipoint specialists. Call 07700 900000. Same-day repair available.",
+  alternates: {
+    canonical: "/services/lock-repair",
+    languages: {
+      "en-GB": "https://lockstarlocksmithkennington.com/services/lock-repair",
+      "en": "https://lockstarlocksmithkennington.com/services/lock-repair",
+    },
+  },
+  openGraph: {
+    title: "Lock Repair Kennington | Stiff & Faulty Locks SE11",
+    description:
+      "Lock repair in Kennington SE11. Stiff, jammed or faulty locks diagnosed and fixed. UPVC multipoint specialists. Call 07700 900000. Same-day repair available.",
+    url: "https://lockstarlocksmithkennington.com/services/lock-repair",
+  },
 };
 
 export default function LockRepairPage() {
+  const webPageSchema = generateWebPageSchema({
+    title: "Lock Repair Kennington | Stiff & Faulty Locks SE11",
+    description:
+      "Lock repair in Kennington SE11. Stiff, jammed or faulty locks diagnosed and fixed. UPVC multipoint specialists. Call 07700 900000. Same-day repair available.",
+    url: "/services/lock-repair",
+    datePublished: "2025-01-15",
+    dateModified: "2025-06-01",
+  });
   const serviceSchema = generateServiceSchema(
     "Lock Repair Kennington",
     "Professional lock repair service in Kennington SE11. Stiff, faulty, or damaged locks diagnosed and fixed quickly.",
@@ -27,6 +45,7 @@ export default function LockRepairPage() {
 
   return (
     <>
+      <SchemaMarkup schema={webPageSchema} />
       <SchemaMarkup schema={serviceSchema} />
       <SchemaMarkup schema={breadcrumbSchema} />
       <ServicePageLayout

@@ -2,19 +2,37 @@ import type { Metadata } from "next";
 import { Car } from "lucide-react";
 import ServicePageLayout from "@/components/ui/ServicePageLayout";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
-import { generateServiceSchema, generateBreadcrumbSchema } from "@/lib/schema";
+import { generateServiceSchema, generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/schema";
 import { BUSINESS } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Auto Locksmith Kennington | Car Lockout & Key Cutting SE11",
+  title: "Auto Locksmith Kennington | Car Lockout SE11",
   description:
-    "Auto locksmith in Kennington SE11. Locked out of your car? Lost car keys? Call " +
-    BUSINESS.phone +
-    ". All makes & models. Non-destructive vehicle entry. 24/7.",
-  alternates: { canonical: "/services/auto-locksmith" },
+    "Auto locksmith in Kennington SE11. Car lockouts, key cutting, transponder programming. All makes. Call 07700 900000. Non-destructive vehicle entry. 24/7.",
+  alternates: {
+    canonical: "/services/auto-locksmith",
+    languages: {
+      "en-GB": "https://lockstarlocksmithkennington.com/services/auto-locksmith",
+      "en": "https://lockstarlocksmithkennington.com/services/auto-locksmith",
+    },
+  },
+  openGraph: {
+    title: "Auto Locksmith Kennington | Car Lockout SE11",
+    description:
+      "Auto locksmith in Kennington SE11. Car lockouts, key cutting, transponder programming. All makes. Call 07700 900000. Non-destructive vehicle entry. 24/7.",
+    url: "https://lockstarlocksmithkennington.com/services/auto-locksmith",
+  },
 };
 
 export default function AutoLocksmithPage() {
+  const webPageSchema = generateWebPageSchema({
+    title: "Auto Locksmith Kennington | Car Lockout SE11",
+    description:
+      "Auto locksmith in Kennington SE11. Car lockouts, key cutting, transponder programming. All makes. Call 07700 900000. Non-destructive vehicle entry. 24/7.",
+    url: "/services/auto-locksmith",
+    datePublished: "2025-01-15",
+    dateModified: "2025-06-01",
+  });
   const serviceSchema = generateServiceSchema(
     "Auto Locksmith Kennington",
     "Auto locksmith services in Kennington SE11. Car lockouts, key cutting, transponder key programming for all vehicle makes and models.",
@@ -27,6 +45,7 @@ export default function AutoLocksmithPage() {
 
   return (
     <>
+      <SchemaMarkup schema={webPageSchema} />
       <SchemaMarkup schema={serviceSchema} />
       <SchemaMarkup schema={breadcrumbSchema} />
       <ServicePageLayout

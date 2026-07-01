@@ -2,19 +2,37 @@ import type { Metadata } from "next";
 import { Plus } from "lucide-react";
 import ServicePageLayout from "@/components/ui/ServicePageLayout";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
-import { generateServiceSchema, generateBreadcrumbSchema } from "@/lib/schema";
+import { generateServiceSchema, generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/schema";
 import { BUSINESS } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Lock Installation Kennington | New Locks Fitted SE11",
+  title: "Lock Installation Kennington | New Locks SE11",
   description:
-    "Lock installation in Kennington SE11. New locks fitted for doors and windows. Call " +
-    BUSINESS.phone +
-    ". BS3621 locks, same-day fitting, all door types.",
-  alternates: { canonical: "/services/lock-installation" },
+    "Lock installation in Kennington SE11. New locks fitted for all door types — BS3621 & high-security. Call 07700 900000. Same-day fitting, fully insured.",
+  alternates: {
+    canonical: "/services/lock-installation",
+    languages: {
+      "en-GB": "https://lockstarlocksmithkennington.com/services/lock-installation",
+      "en": "https://lockstarlocksmithkennington.com/services/lock-installation",
+    },
+  },
+  openGraph: {
+    title: "Lock Installation Kennington | New Locks SE11",
+    description:
+      "Lock installation in Kennington SE11. New locks fitted for all door types — BS3621 & high-security. Call 07700 900000. Same-day fitting, fully insured.",
+    url: "https://lockstarlocksmithkennington.com/services/lock-installation",
+  },
 };
 
 export default function LockInstallationPage() {
+  const webPageSchema = generateWebPageSchema({
+    title: "Lock Installation Kennington | New Locks SE11",
+    description:
+      "Lock installation in Kennington SE11. New locks fitted for all door types — BS3621 & high-security. Call 07700 900000. Same-day fitting, fully insured.",
+    url: "/services/lock-installation",
+    datePublished: "2025-01-15",
+    dateModified: "2025-06-01",
+  });
   const serviceSchema = generateServiceSchema(
     "Lock Installation Kennington",
     "Professional lock installation service in Kennington SE11. New locks fitted for all door and window types.",
@@ -27,6 +45,7 @@ export default function LockInstallationPage() {
 
   return (
     <>
+      <SchemaMarkup schema={webPageSchema} />
       <SchemaMarkup schema={serviceSchema} />
       <SchemaMarkup schema={breadcrumbSchema} />
       <ServicePageLayout

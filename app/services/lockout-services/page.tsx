@@ -2,19 +2,37 @@ import type { Metadata } from "next";
 import { KeyRound } from "lucide-react";
 import ServicePageLayout from "@/components/ui/ServicePageLayout";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
-import { generateServiceSchema, generateBreadcrumbSchema } from "@/lib/schema";
+import { generateServiceSchema, generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/schema";
 import { BUSINESS } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Lockout Services Kennington | Locked Out SE11 — Help Fast",
+  title: "Lockout Services Kennington | 24/7 SE11 Help",
   description:
-    "Locked out in Kennington SE11? Call " +
-    BUSINESS.phone +
-    " now. Non-destructive entry, 20–30 min response, no call-out fee. 24/7 lockout specialists.",
-  alternates: { canonical: "/services/lockout-services" },
+    "Locked out in Kennington SE11? Call 07700 900000. Non-destructive entry, 20–30 min response, no call-out fee. Home, office & car lockouts covered 24/7.",
+  alternates: {
+    canonical: "/services/lockout-services",
+    languages: {
+      "en-GB": "https://lockstarlocksmithkennington.com/services/lockout-services",
+      "en": "https://lockstarlocksmithkennington.com/services/lockout-services",
+    },
+  },
+  openGraph: {
+    title: "Lockout Services Kennington | 24/7 SE11 Help",
+    description:
+      "Locked out in Kennington SE11? Call 07700 900000. Non-destructive entry, 20–30 min response, no call-out fee. Home, office & car lockouts covered 24/7.",
+    url: "https://lockstarlocksmithkennington.com/services/lockout-services",
+  },
 };
 
 export default function LockoutServicesPage() {
+  const webPageSchema = generateWebPageSchema({
+    title: "Lockout Services Kennington | 24/7 SE11 Help",
+    description:
+      "Locked out in Kennington SE11? Call 07700 900000. Non-destructive entry, 20–30 min response, no call-out fee. Home, office & car lockouts covered 24/7.",
+    url: "/services/lockout-services",
+    datePublished: "2025-01-15",
+    dateModified: "2025-06-01",
+  });
   const serviceSchema = generateServiceSchema(
     "Lockout Services Kennington",
     "Professional lockout service in Kennington SE11. Non-destructive entry, 20–30 minute response, 24/7 availability.",
@@ -27,6 +45,7 @@ export default function LockoutServicesPage() {
 
   return (
     <>
+      <SchemaMarkup schema={webPageSchema} />
       <SchemaMarkup schema={serviceSchema} />
       <SchemaMarkup schema={breadcrumbSchema} />
       <ServicePageLayout

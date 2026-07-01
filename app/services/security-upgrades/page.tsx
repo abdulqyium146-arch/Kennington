@@ -2,19 +2,37 @@ import type { Metadata } from "next";
 import { ShieldCheck } from "lucide-react";
 import ServicePageLayout from "@/components/ui/ServicePageLayout";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
-import { generateServiceSchema, generateBreadcrumbSchema } from "@/lib/schema";
+import { generateServiceSchema, generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/schema";
 import { BUSINESS } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Security Upgrades Kennington | Home & Business Security SE11",
+  title: "Security Upgrades Kennington | Anti-Snap SE11",
   description:
-    "Security upgrades in Kennington SE11. High-security locks, door reinforcement, security surveys. Call " +
-    BUSINESS.phone +
-    ". Expert security advice for homes and businesses.",
-  alternates: { canonical: "/services/security-upgrades" },
+    "Home & business security upgrades in Kennington SE11. Anti-snap cylinders, door reinforcement, free security survey. Call 07700 900000. Fully insured.",
+  alternates: {
+    canonical: "/services/security-upgrades",
+    languages: {
+      "en-GB": "https://lockstarlocksmithkennington.com/services/security-upgrades",
+      "en": "https://lockstarlocksmithkennington.com/services/security-upgrades",
+    },
+  },
+  openGraph: {
+    title: "Security Upgrades Kennington | Anti-Snap SE11",
+    description:
+      "Home & business security upgrades in Kennington SE11. Anti-snap cylinders, door reinforcement, free security survey. Call 07700 900000. Fully insured.",
+    url: "https://lockstarlocksmithkennington.com/services/security-upgrades",
+  },
 };
 
 export default function SecurityUpgradesPage() {
+  const webPageSchema = generateWebPageSchema({
+    title: "Security Upgrades Kennington | Anti-Snap SE11",
+    description:
+      "Home & business security upgrades in Kennington SE11. Anti-snap cylinders, door reinforcement, free security survey. Call 07700 900000. Fully insured.",
+    url: "/services/security-upgrades",
+    datePublished: "2025-01-15",
+    dateModified: "2025-06-01",
+  });
   const serviceSchema = generateServiceSchema(
     "Security Upgrades Kennington",
     "Home and business security upgrades in Kennington SE11. High-security lock fitting, door reinforcement, and security surveys.",
@@ -27,6 +45,7 @@ export default function SecurityUpgradesPage() {
 
   return (
     <>
+      <SchemaMarkup schema={webPageSchema} />
       <SchemaMarkup schema={serviceSchema} />
       <SchemaMarkup schema={breadcrumbSchema} />
       <ServicePageLayout

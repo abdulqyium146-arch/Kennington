@@ -2,19 +2,37 @@ import type { Metadata } from "next";
 import { Building2 } from "lucide-react";
 import ServicePageLayout from "@/components/ui/ServicePageLayout";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
-import { generateServiceSchema, generateBreadcrumbSchema } from "@/lib/schema";
+import { generateServiceSchema, generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/schema";
 import { BUSINESS } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Commercial Locksmith Kennington | Business Lock Services SE11",
+  title: "Commercial Locksmith Kennington | Business SE11",
   description:
-    "Commercial locksmith in Kennington SE11. Master key systems, access control, office lockouts. Call " +
-    BUSINESS.phone +
-    ". DBS checked, 24/7 business security.",
-  alternates: { canonical: "/services/commercial-locksmith" },
+    "Commercial locksmith in Kennington SE11. Master key systems, access control, office lockouts. Call 07700 900000. 24/7 business security. DBS checked.",
+  alternates: {
+    canonical: "/services/commercial-locksmith",
+    languages: {
+      "en-GB": "https://lockstarlocksmithkennington.com/services/commercial-locksmith",
+      "en": "https://lockstarlocksmithkennington.com/services/commercial-locksmith",
+    },
+  },
+  openGraph: {
+    title: "Commercial Locksmith Kennington | Business SE11",
+    description:
+      "Commercial locksmith in Kennington SE11. Master key systems, access control, office lockouts. Call 07700 900000. 24/7 business security. DBS checked.",
+    url: "https://lockstarlocksmithkennington.com/services/commercial-locksmith",
+  },
 };
 
 export default function CommercialLocksmithPage() {
+  const webPageSchema = generateWebPageSchema({
+    title: "Commercial Locksmith Kennington | Business SE11",
+    description:
+      "Commercial locksmith in Kennington SE11. Master key systems, access control, office lockouts. Call 07700 900000. 24/7 business security. DBS checked.",
+    url: "/services/commercial-locksmith",
+    datePublished: "2025-01-15",
+    dateModified: "2025-06-01",
+  });
   const serviceSchema = generateServiceSchema(
     "Commercial Locksmith Kennington",
     "Commercial locksmith services in Kennington SE11. Office lockouts, master key systems, access control, and business security.",
@@ -27,6 +45,7 @@ export default function CommercialLocksmithPage() {
 
   return (
     <>
+      <SchemaMarkup schema={webPageSchema} />
       <SchemaMarkup schema={serviceSchema} />
       <SchemaMarkup schema={breadcrumbSchema} />
       <ServicePageLayout

@@ -2,24 +2,37 @@ import type { Metadata } from "next";
 import { Zap } from "lucide-react";
 import ServicePageLayout from "@/components/ui/ServicePageLayout";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
-import { generateServiceSchema, generateBreadcrumbSchema } from "@/lib/schema";
+import { generateServiceSchema, generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/schema";
 import { BUSINESS } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Emergency Locksmith Kennington | 24/7 — 20 Min Response",
+  title: "Emergency Locksmith Kennington | 24/7 — 20 Min",
   description:
-    "Emergency locksmith in Kennington SE11. Locked out? Call " +
-    BUSINESS.phone +
-    " now. DBS checked, fully insured, 20–30 min response, no call-out fee. Available 24/7.",
-  alternates: { canonical: "/services/emergency-locksmith" },
+    "Locked out in Kennington SE11? Call 07700 900000 now. Emergency locksmith — 20–30 min response, 24/7, DBS checked, no call-out fee. Fixed price quoted.",
+  alternates: {
+    canonical: "/services/emergency-locksmith",
+    languages: {
+      "en-GB": "https://lockstarlocksmithkennington.com/services/emergency-locksmith",
+      "en": "https://lockstarlocksmithkennington.com/services/emergency-locksmith",
+    },
+  },
   openGraph: {
-    title: "Emergency Locksmith Kennington | 24/7 Emergency Response",
+    title: "Emergency Locksmith Kennington | 24/7 — 20 Min",
     description:
-      "24/7 emergency locksmith in Kennington SE11. 20–30 min response. Call " + BUSINESS.phone,
+      "Locked out in Kennington SE11? Call 07700 900000 now. Emergency locksmith — 20–30 min response, 24/7, DBS checked, no call-out fee. Fixed price quoted.",
+    url: "https://lockstarlocksmithkennington.com/services/emergency-locksmith",
   },
 };
 
 export default function EmergencyLocksmithPage() {
+  const webPageSchema = generateWebPageSchema({
+    title: "Emergency Locksmith Kennington | 24/7 — 20 Min",
+    description:
+      "Locked out in Kennington SE11? Call 07700 900000 now. Emergency locksmith — 20–30 min response, 24/7, DBS checked, no call-out fee. Fixed price quoted.",
+    url: "/services/emergency-locksmith",
+    datePublished: "2025-01-15",
+    dateModified: "2025-06-01",
+  });
   const serviceSchema = generateServiceSchema(
     "Emergency Locksmith Kennington",
     "24/7 emergency locksmith service in Kennington SE11. Locked out or need urgent lock repair? We respond in 20–30 minutes.",
@@ -32,6 +45,7 @@ export default function EmergencyLocksmithPage() {
 
   return (
     <>
+      <SchemaMarkup schema={webPageSchema} />
       <SchemaMarkup schema={serviceSchema} />
       <SchemaMarkup schema={breadcrumbSchema} />
       <ServicePageLayout

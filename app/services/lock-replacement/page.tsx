@@ -2,19 +2,37 @@ import type { Metadata } from "next";
 import { RotateCcw } from "lucide-react";
 import ServicePageLayout from "@/components/ui/ServicePageLayout";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
-import { generateServiceSchema, generateBreadcrumbSchema } from "@/lib/schema";
+import { generateServiceSchema, generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/schema";
 import { BUSINESS } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Lock Replacement Kennington | New Locks Fitted SE11",
+  title: "Lock Replacement Kennington | BS3621 Locks SE11",
   description:
-    "Lock replacement in Kennington SE11. Yale, Mul-T-Lock, ERA, Banham locks supplied and fitted. Call " +
-    BUSINESS.phone +
-    ". Same-day service, BS3621 approved.",
-  alternates: { canonical: "/services/lock-replacement" },
+    "Lock replacement in Kennington SE11. Yale, Mul-T-Lock, ERA, Banham supplied and fitted. Call 07700 900000. Same-day service, BS3621 approved, insured.",
+  alternates: {
+    canonical: "/services/lock-replacement",
+    languages: {
+      "en-GB": "https://lockstarlocksmithkennington.com/services/lock-replacement",
+      "en": "https://lockstarlocksmithkennington.com/services/lock-replacement",
+    },
+  },
+  openGraph: {
+    title: "Lock Replacement Kennington | BS3621 Locks SE11",
+    description:
+      "Lock replacement in Kennington SE11. Yale, Mul-T-Lock, ERA, Banham supplied and fitted. Call 07700 900000. Same-day service, BS3621 approved, insured.",
+    url: "https://lockstarlocksmithkennington.com/services/lock-replacement",
+  },
 };
 
 export default function LockReplacementPage() {
+  const webPageSchema = generateWebPageSchema({
+    title: "Lock Replacement Kennington | BS3621 Locks SE11",
+    description:
+      "Lock replacement in Kennington SE11. Yale, Mul-T-Lock, ERA, Banham supplied and fitted. Call 07700 900000. Same-day service, BS3621 approved, insured.",
+    url: "/services/lock-replacement",
+    datePublished: "2025-01-15",
+    dateModified: "2025-06-01",
+  });
   const serviceSchema = generateServiceSchema(
     "Lock Replacement Kennington",
     "Lock replacement service in Kennington SE11. Quality British Standard BS3621 locks supplied and fitted same day.",
@@ -27,6 +45,7 @@ export default function LockReplacementPage() {
 
   return (
     <>
+      <SchemaMarkup schema={webPageSchema} />
       <SchemaMarkup schema={serviceSchema} />
       <SchemaMarkup schema={breadcrumbSchema} />
       <ServicePageLayout

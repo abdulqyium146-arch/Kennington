@@ -2,19 +2,37 @@ import type { Metadata } from "next";
 import { ShieldAlert } from "lucide-react";
 import ServicePageLayout from "@/components/ui/ServicePageLayout";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
-import { generateServiceSchema, generateBreadcrumbSchema } from "@/lib/schema";
+import { generateServiceSchema, generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/schema";
 import { BUSINESS } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Burglary Repairs Kennington | Emergency Board-Up SE11",
+  title: "Burglary Repairs Kennington | Emergency SE11",
   description:
-    "Emergency burglary repairs in Kennington SE11. Board-up, damage repair, and lock replacement after a break-in. Call " +
-    BUSINESS.phone +
-    " — same-day response.",
-  alternates: { canonical: "/services/burglary-repairs" },
+    "Burglary repairs in Kennington SE11. Emergency boarding up, damage repair, lock upgrade after break-in. Call 07700 900000. Same-day response. Fully insured.",
+  alternates: {
+    canonical: "/services/burglary-repairs",
+    languages: {
+      "en-GB": "https://lockstarlocksmithkennington.com/services/burglary-repairs",
+      "en": "https://lockstarlocksmithkennington.com/services/burglary-repairs",
+    },
+  },
+  openGraph: {
+    title: "Burglary Repairs Kennington | Emergency SE11",
+    description:
+      "Burglary repairs in Kennington SE11. Emergency boarding up, damage repair, lock upgrade after break-in. Call 07700 900000. Same-day response. Fully insured.",
+    url: "https://lockstarlocksmithkennington.com/services/burglary-repairs",
+  },
 };
 
 export default function BurglaryRepairsPage() {
+  const webPageSchema = generateWebPageSchema({
+    title: "Burglary Repairs Kennington | Emergency SE11",
+    description:
+      "Burglary repairs in Kennington SE11. Emergency boarding up, damage repair, lock upgrade after break-in. Call 07700 900000. Same-day response. Fully insured.",
+    url: "/services/burglary-repairs",
+    datePublished: "2025-01-15",
+    dateModified: "2025-06-01",
+  });
   const serviceSchema = generateServiceSchema(
     "Burglary Repairs Kennington",
     "Emergency burglary repair service in Kennington SE11. Board-up, damage repair and upgraded lock replacement after a break-in.",
@@ -27,6 +45,7 @@ export default function BurglaryRepairsPage() {
 
   return (
     <>
+      <SchemaMarkup schema={webPageSchema} />
       <SchemaMarkup schema={serviceSchema} />
       <SchemaMarkup schema={breadcrumbSchema} />
       <ServicePageLayout
