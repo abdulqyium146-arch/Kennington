@@ -72,12 +72,12 @@ export const metadata: Metadata = {
       "24/7 emergency locksmith in Kennington SE11. DBS checked, fully insured. 20–30 min response. No call-out fee.",
     images: [
       {
-        url: `${DOMAIN}/og-image.jpg`,
-        secureUrl: `${DOMAIN}/og-image.jpg`,
-        width: 1200,
-        height: 630,
+        url: `${DOMAIN}/logo.webp`,
+        secureUrl: `${DOMAIN}/logo.webp`,
+        width: 512,
+        height: 512,
         alt: "Lockstar Locksmith Kennington — 24/7 Emergency Locksmith SE11",
-        type: "image/jpeg",
+        type: "image/webp",
       },
     ],
   },
@@ -88,7 +88,7 @@ export const metadata: Metadata = {
     title: "Lockstar Locksmith Kennington | 24/7 Emergency Locksmith",
     description:
       "24/7 emergency locksmith in Kennington SE11. 20–30 min response. DBS checked, fully insured.",
-    images: [`${DOMAIN}/og-image.jpg`],
+    images: [`${DOMAIN}/logo.webp`],
   },
   alternates: {
     canonical: "/",
@@ -103,10 +103,12 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+      { url: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
+      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+      { url: "/android-chrome-512x512.png", type: "image/png", sizes: "512x512" },
     ],
     apple: [
-      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
     shortcut: "/favicon.ico",
   },

@@ -16,13 +16,13 @@ export default function manifest(): MetadataRoute.Manifest {
     categories: ["utilities", "local business"],
     icons: [
       {
-        src: "/icon-192.png",
+        src: "/android-chrome-192x192.png",
         sizes: "192x192",
         type: "image/png",
         purpose: "maskable",
       },
       {
-        src: "/icon.png",
+        src: "/android-chrome-512x512.png",
         sizes: "512x512",
         type: "image/png",
         purpose: "any",
@@ -34,14 +34,14 @@ export default function manifest(): MetadataRoute.Manifest {
         short_name: "Call",
         description: "Call Lockstar Locksmith Kennington",
         url: "tel:07700900000",
-        icons: [{ src: "/icon-192.png", sizes: "192x192" }],
+        icons: [{ src: "/android-chrome-192x192.png", sizes: "192x192" }],
       },
       {
         name: "Emergency Locksmith",
         short_name: "Emergency",
         description: "24/7 emergency locksmith service",
         url: "/services/emergency-locksmith",
-        icons: [{ src: "/icon-192.png", sizes: "192x192" }],
+        icons: [{ src: "/android-chrome-192x192.png", sizes: "192x192" }],
       },
     ],
   };
