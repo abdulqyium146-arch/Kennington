@@ -1,8 +1,8 @@
 export const BUSINESS = {
   name: "Lockstar Locksmith Kennington",
   shortName: "Lockstar Locksmith",
-  phone: "07700 900000",
-  phoneHref: "tel:07700900000",
+  phone: "07984 547185",
+  phoneHref: "tel:+447984547185",
   email: "info@lockstarlocksmithkennington.com",
   address: {
     street: "Kennington Road",

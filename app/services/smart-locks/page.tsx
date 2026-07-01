@@ -8,7 +8,7 @@ import { BUSINESS } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Smart Locks Kennington | Keypad & App Locks SE11",
   description:
-    "Smart lock installation in Kennington SE11. Keypad, Bluetooth & app-controlled locks fitted. All major brands. Call 07700 900000. Expert fitting & setup.",
+    "Smart lock installation in Kennington SE11. Keypad, Bluetooth & app-controlled locks fitted. All major brands. Call 07984 547185. Expert fitting & setup.",
   alternates: {
     canonical: "/services/smart-locks",
     languages: {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Smart Locks Kennington | Keypad & App Locks SE11",
     description:
-      "Smart lock installation in Kennington SE11. Keypad, Bluetooth & app-controlled locks fitted. All major brands. Call 07700 900000. Expert fitting & setup.",
+      "Smart lock installation in Kennington SE11. Keypad, Bluetooth & app-controlled locks fitted. All major brands. Call 07984 547185. Expert fitting & setup.",
     url: "https://lockstarlocksmithkennington.com/services/smart-locks",
   },
 };
@@ -28,7 +28,7 @@ export default function SmartLocksPage() {
   const webPageSchema = generateWebPageSchema({
     title: "Smart Locks Kennington | Keypad & App Locks SE11",
     description:
-      "Smart lock installation in Kennington SE11. Keypad, Bluetooth & app-controlled locks fitted. All major brands. Call 07700 900000. Expert fitting & setup.",
+      "Smart lock installation in Kennington SE11. Keypad, Bluetooth & app-controlled locks fitted. All major brands. Call 07984 547185. Expert fitting & setup.",
     url: "/services/smart-locks",
     datePublished: "2025-01-15",
     dateModified: "2025-06-01",

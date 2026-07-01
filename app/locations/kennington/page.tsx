@@ -8,7 +8,7 @@ import { BUSINESS } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Locksmith Kennington | 24/7 Emergency SE11",
   description:
-    "Locksmith in Kennington SE11. 24/7 emergency lockouts, lock fitting & burglary repairs. Call 07700 900000. DBS checked, 20–30 min response, no call-out fee.",
+    "Locksmith in Kennington SE11. 24/7 emergency lockouts, lock fitting & burglary repairs. Call 07984 547185. DBS checked, 20–30 min response, no call-out fee.",
   alternates: {
     canonical: "/locations/kennington",
     languages: {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Locksmith Kennington | 24/7 Emergency SE11",
     description:
-      "Locksmith in Kennington SE11. 24/7 emergency lockouts, lock fitting & burglary repairs. Call 07700 900000. DBS checked, 20–30 min response, no call-out fee.",
+      "Locksmith in Kennington SE11. 24/7 emergency lockouts, lock fitting & burglary repairs. Call 07984 547185. DBS checked, 20–30 min response, no call-out fee.",
     url: "https://lockstarlocksmithkennington.com/locations/kennington",
   },
 };
@@ -28,7 +28,7 @@ export default function KenningtonPage() {
   const webPageSchema = generateWebPageSchema({
     title: "Locksmith Kennington | 24/7 Emergency SE11",
     description:
-      "Locksmith in Kennington SE11. 24/7 emergency lockouts, lock fitting & burglary repairs. Call 07700 900000. DBS checked, 20–30 min response, no call-out fee.",
+      "Locksmith in Kennington SE11. 24/7 emergency lockouts, lock fitting & burglary repairs. Call 07984 547185. DBS checked, 20–30 min response, no call-out fee.",
     url: "/locations/kennington",
     datePublished: "2025-01-15",
     dateModified: "2025-06-01",

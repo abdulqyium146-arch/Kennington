@@ -8,7 +8,7 @@ import { BUSINESS } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Residential Locksmith Kennington | Home Locks SE11",
   description:
-    "Residential locksmith in Kennington SE11. Lock fitting, replacement & repair for houses and flats. Call 07700 900000. DBS checked, insured, 24/7 available.",
+    "Residential locksmith in Kennington SE11. Lock fitting, replacement & repair for houses and flats. Call 07984 547185. DBS checked, insured, 24/7 available.",
   alternates: {
     canonical: "/services/residential-locksmith",
     languages: {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Residential Locksmith Kennington | Home Locks SE11",
     description:
-      "Residential locksmith in Kennington SE11. Lock fitting, replacement & repair for houses and flats. Call 07700 900000. DBS checked, insured, 24/7 available.",
+      "Residential locksmith in Kennington SE11. Lock fitting, replacement & repair for houses and flats. Call 07984 547185. DBS checked, insured, 24/7 available.",
     url: "https://lockstarlocksmithkennington.com/services/residential-locksmith",
   },
 };
@@ -28,7 +28,7 @@ export default function ResidentialLocksmithPage() {
   const webPageSchema = generateWebPageSchema({
     title: "Residential Locksmith Kennington | Home Locks SE11",
     description:
-      "Residential locksmith in Kennington SE11. Lock fitting, replacement & repair for houses and flats. Call 07700 900000. DBS checked, insured, 24/7 available.",
+      "Residential locksmith in Kennington SE11. Lock fitting, replacement & repair for houses and flats. Call 07984 547185. DBS checked, insured, 24/7 available.",
     url: "/services/residential-locksmith",
     datePublished: "2025-01-15",
     dateModified: "2025-06-01",

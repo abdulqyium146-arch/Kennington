@@ -8,7 +8,7 @@ import { BUSINESS } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Locksmith Abingdon Oxfordshire | 24/7 OX14",
   description:
-    "Locksmith in Abingdon, Oxfordshire OX14. Emergency lockouts, lock fitting & UPVC repairs. Call 07700 900000. DBS checked, fast response, no call-out fee.",
+    "Locksmith in Abingdon, Oxfordshire OX14. Emergency lockouts, lock fitting & UPVC repairs. Call 07984 547185. DBS checked, fast response, no call-out fee.",
   keywords: [
     "locksmith abingdon",
     "locksmith abingdon oxfordshire",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Locksmith Abingdon Oxfordshire | 24/7 OX14",
     description:
-      "Locksmith in Abingdon, Oxfordshire OX14. Emergency lockouts, lock fitting & UPVC repairs. Call 07700 900000. DBS checked, fast response, no call-out fee.",
+      "Locksmith in Abingdon, Oxfordshire OX14. Emergency lockouts, lock fitting & UPVC repairs. Call 07984 547185. DBS checked, fast response, no call-out fee.",
     url: "https://lockstarlocksmithkennington.com/locations/abingdon-oxfordshire",
   },
 };
@@ -35,7 +35,7 @@ export default function AbingdonOxfordshirePage() {
   const webPageSchema = generateWebPageSchema({
     title: "Locksmith Abingdon Oxfordshire | 24/7 OX14",
     description:
-      "Locksmith in Abingdon, Oxfordshire OX14. Emergency lockouts, lock fitting & UPVC repairs. Call 07700 900000. DBS checked, fast response, no call-out fee.",
+      "Locksmith in Abingdon, Oxfordshire OX14. Emergency lockouts, lock fitting & UPVC repairs. Call 07984 547185. DBS checked, fast response, no call-out fee.",
     url: "/locations/abingdon-oxfordshire",
     datePublished: "2025-01-15",
     dateModified: "2025-06-01",

@@ -8,7 +8,7 @@ import { BUSINESS } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Emergency Locksmith Kennington | 24/7 — 20 Min",
   description:
-    "Locked out in Kennington SE11? Call 07700 900000 now. Emergency locksmith — 20–30 min response, 24/7, DBS checked, no call-out fee. Fixed price quoted.",
+    "Locked out in Kennington SE11? Call 07984 547185 now. Emergency locksmith — 20–30 min response, 24/7, DBS checked, no call-out fee. Fixed price quoted.",
   alternates: {
     canonical: "/services/emergency-locksmith",
     languages: {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Emergency Locksmith Kennington | 24/7 — 20 Min",
     description:
-      "Locked out in Kennington SE11? Call 07700 900000 now. Emergency locksmith — 20–30 min response, 24/7, DBS checked, no call-out fee. Fixed price quoted.",
+      "Locked out in Kennington SE11? Call 07984 547185 now. Emergency locksmith — 20–30 min response, 24/7, DBS checked, no call-out fee. Fixed price quoted.",
     url: "https://lockstarlocksmithkennington.com/services/emergency-locksmith",
   },
 };
@@ -28,7 +28,7 @@ export default function EmergencyLocksmithPage() {
   const webPageSchema = generateWebPageSchema({
     title: "Emergency Locksmith Kennington | 24/7 — 20 Min",
     description:
-      "Locked out in Kennington SE11? Call 07700 900000 now. Emergency locksmith — 20–30 min response, 24/7, DBS checked, no call-out fee. Fixed price quoted.",
+      "Locked out in Kennington SE11? Call 07984 547185 now. Emergency locksmith — 20–30 min response, 24/7, DBS checked, no call-out fee. Fixed price quoted.",
     url: "/services/emergency-locksmith",
     datePublished: "2025-01-15",
     dateModified: "2025-06-01",

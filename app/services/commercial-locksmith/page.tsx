@@ -8,7 +8,7 @@ import { BUSINESS } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Commercial Locksmith Kennington | Business SE11",
   description:
-    "Commercial locksmith in Kennington SE11. Master key systems, access control, office lockouts. Call 07700 900000. 24/7 business security. DBS checked.",
+    "Commercial locksmith in Kennington SE11. Master key systems, access control, office lockouts. Call 07984 547185. 24/7 business security. DBS checked.",
   alternates: {
     canonical: "/services/commercial-locksmith",
     languages: {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Commercial Locksmith Kennington | Business SE11",
     description:
-      "Commercial locksmith in Kennington SE11. Master key systems, access control, office lockouts. Call 07700 900000. 24/7 business security. DBS checked.",
+      "Commercial locksmith in Kennington SE11. Master key systems, access control, office lockouts. Call 07984 547185. 24/7 business security. DBS checked.",
     url: "https://lockstarlocksmithkennington.com/services/commercial-locksmith",
   },
 };
@@ -28,7 +28,7 @@ export default function CommercialLocksmithPage() {
   const webPageSchema = generateWebPageSchema({
     title: "Commercial Locksmith Kennington | Business SE11",
     description:
-      "Commercial locksmith in Kennington SE11. Master key systems, access control, office lockouts. Call 07700 900000. 24/7 business security. DBS checked.",
+      "Commercial locksmith in Kennington SE11. Master key systems, access control, office lockouts. Call 07984 547185. 24/7 business security. DBS checked.",
     url: "/services/commercial-locksmith",
     datePublished: "2025-01-15",
     dateModified: "2025-06-01",

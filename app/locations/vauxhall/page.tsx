@@ -12,7 +12,7 @@ import {
 export const metadata: Metadata = {
   title: "Locksmith Vauxhall SE11 SW8 | 24/7 Emergency",
   description:
-    "Locksmith in Vauxhall SE11 & SW8. Emergency lockouts, lock fitting & UPVC repairs. Call 07700 900000. DBS checked, fast response, no call-out fee.",
+    "Locksmith in Vauxhall SE11 & SW8. Emergency lockouts, lock fitting & UPVC repairs. Call 07984 547185. DBS checked, fast response, no call-out fee.",
   keywords: [
     "locksmith vauxhall",
     "vauxhall locksmith",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Locksmith Vauxhall SE11 SW8 | 24/7 Emergency",
     description:
-      "Locksmith in Vauxhall SE11 & SW8. Emergency lockouts, lock fitting & UPVC repairs. Call 07700 900000. DBS checked, fast response, no call-out fee.",
+      "Locksmith in Vauxhall SE11 & SW8. Emergency lockouts, lock fitting & UPVC repairs. Call 07984 547185. DBS checked, fast response, no call-out fee.",
     url: "https://lockstarlocksmithkennington.com/locations/vauxhall",
   },
 };
@@ -40,7 +40,7 @@ export default function VauxhallPage() {
   const webPageSchema = generateWebPageSchema({
     title: "Locksmith Vauxhall SE11 SW8 | 24/7 Emergency",
     description:
-      "Locksmith in Vauxhall SE11 & SW8. Emergency lockouts, lock fitting & UPVC repairs. Call 07700 900000. DBS checked, fast response, no call-out fee.",
+      "Locksmith in Vauxhall SE11 & SW8. Emergency lockouts, lock fitting & UPVC repairs. Call 07984 547185. DBS checked, fast response, no call-out fee.",
     url: "/locations/vauxhall",
     datePublished: "2025-01-15",
     dateModified: "2025-06-01",

@@ -32,8 +32,8 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 ### 1. Update Phone Number
 Edit `lib/constants.ts` and replace the placeholder phone number:
 ```ts
-phone: "07700 900000",       // ← Replace with real number
-phoneHref: "tel:07700900000", // ← Replace with real number (no spaces)
+phone: "07984 547185",       // ← Replace with real number
+phoneHref: "tel:+447984547185", // ← Replace with real number (no spaces)
 ```
 
 ### 2. Update Email Address

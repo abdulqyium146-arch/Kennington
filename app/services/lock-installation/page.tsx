@@ -8,7 +8,7 @@ import { BUSINESS } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Lock Installation Kennington | New Locks SE11",
   description:
-    "Lock installation in Kennington SE11. New locks fitted for all door types — BS3621 & high-security. Call 07700 900000. Same-day fitting, fully insured.",
+    "Lock installation in Kennington SE11. New locks fitted for all door types — BS3621 & high-security. Call 07984 547185. Same-day fitting, fully insured.",
   alternates: {
     canonical: "/services/lock-installation",
     languages: {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Lock Installation Kennington | New Locks SE11",
     description:
-      "Lock installation in Kennington SE11. New locks fitted for all door types — BS3621 & high-security. Call 07700 900000. Same-day fitting, fully insured.",
+      "Lock installation in Kennington SE11. New locks fitted for all door types — BS3621 & high-security. Call 07984 547185. Same-day fitting, fully insured.",
     url: "https://lockstarlocksmithkennington.com/services/lock-installation",
   },
 };
@@ -28,7 +28,7 @@ export default function LockInstallationPage() {
   const webPageSchema = generateWebPageSchema({
     title: "Lock Installation Kennington | New Locks SE11",
     description:
-      "Lock installation in Kennington SE11. New locks fitted for all door types — BS3621 & high-security. Call 07700 900000. Same-day fitting, fully insured.",
+      "Lock installation in Kennington SE11. New locks fitted for all door types — BS3621 & high-security. Call 07984 547185. Same-day fitting, fully insured.",
     url: "/services/lock-installation",
     datePublished: "2025-01-15",
     dateModified: "2025-06-01",

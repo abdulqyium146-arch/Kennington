@@ -12,7 +12,7 @@ import {
 export const metadata: Metadata = {
   title: "Locksmith Elephant & Castle SE1 SE17 | 24/7",
   description:
-    "Locksmith in Elephant & Castle SE1 & SE17. Emergency lockouts, lock fitting & security upgrades. Call 07700 900000. DBS checked, fast response, no call-out fee.",
+    "Locksmith in Elephant & Castle SE1 & SE17. Emergency lockouts, lock fitting & security upgrades. Call 07984 547185. DBS checked, fast response, no call-out fee.",
   keywords: [
     "locksmith elephant and castle",
     "elephant castle locksmith",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Locksmith Elephant & Castle SE1 SE17 | 24/7",
     description:
-      "Locksmith in Elephant & Castle SE1 & SE17. Emergency lockouts, lock fitting & security upgrades. Call 07700 900000. DBS checked, fast response, no call-out fee.",
+      "Locksmith in Elephant & Castle SE1 & SE17. Emergency lockouts, lock fitting & security upgrades. Call 07984 547185. DBS checked, fast response, no call-out fee.",
     url: "https://lockstarlocksmithkennington.com/locations/elephant-and-castle",
   },
 };
@@ -40,7 +40,7 @@ export default function ElephantAndCastlePage() {
   const webPageSchema = generateWebPageSchema({
     title: "Locksmith Elephant & Castle SE1 SE17 | 24/7",
     description:
-      "Locksmith in Elephant & Castle SE1 & SE17. Emergency lockouts, lock fitting & security upgrades. Call 07700 900000. DBS checked, fast response, no call-out fee.",
+      "Locksmith in Elephant & Castle SE1 & SE17. Emergency lockouts, lock fitting & security upgrades. Call 07984 547185. DBS checked, fast response, no call-out fee.",
     url: "/locations/elephant-and-castle",
     datePublished: "2025-01-15",
     dateModified: "2025-06-01",

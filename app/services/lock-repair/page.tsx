@@ -8,7 +8,7 @@ import { BUSINESS } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Lock Repair Kennington | Stiff & Faulty Locks SE11",
   description:
-    "Lock repair in Kennington SE11. Stiff, jammed or faulty locks diagnosed and fixed. UPVC multipoint specialists. Call 07700 900000. Same-day repair available.",
+    "Lock repair in Kennington SE11. Stiff, jammed or faulty locks diagnosed and fixed. UPVC multipoint specialists. Call 07984 547185. Same-day repair available.",
   alternates: {
     canonical: "/services/lock-repair",
     languages: {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Lock Repair Kennington | Stiff & Faulty Locks SE11",
     description:
-      "Lock repair in Kennington SE11. Stiff, jammed or faulty locks diagnosed and fixed. UPVC multipoint specialists. Call 07700 900000. Same-day repair available.",
+      "Lock repair in Kennington SE11. Stiff, jammed or faulty locks diagnosed and fixed. UPVC multipoint specialists. Call 07984 547185. Same-day repair available.",
     url: "https://lockstarlocksmithkennington.com/services/lock-repair",
   },
 };
@@ -28,7 +28,7 @@ export default function LockRepairPage() {
   const webPageSchema = generateWebPageSchema({
     title: "Lock Repair Kennington | Stiff & Faulty Locks SE11",
     description:
-      "Lock repair in Kennington SE11. Stiff, jammed or faulty locks diagnosed and fixed. UPVC multipoint specialists. Call 07700 900000. Same-day repair available.",
+      "Lock repair in Kennington SE11. Stiff, jammed or faulty locks diagnosed and fixed. UPVC multipoint specialists. Call 07984 547185. Same-day repair available.",
     url: "/services/lock-repair",
     datePublished: "2025-01-15",
     dateModified: "2025-06-01",

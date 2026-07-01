@@ -8,7 +8,7 @@ import { BUSINESS } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Lock Replacement Kennington | BS3621 Locks SE11",
   description:
-    "Lock replacement in Kennington SE11. Yale, Mul-T-Lock, ERA, Banham supplied and fitted. Call 07700 900000. Same-day service, BS3621 approved, insured.",
+    "Lock replacement in Kennington SE11. Yale, Mul-T-Lock, ERA, Banham supplied and fitted. Call 07984 547185. Same-day service, BS3621 approved, insured.",
   alternates: {
     canonical: "/services/lock-replacement",
     languages: {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Lock Replacement Kennington | BS3621 Locks SE11",
     description:
-      "Lock replacement in Kennington SE11. Yale, Mul-T-Lock, ERA, Banham supplied and fitted. Call 07700 900000. Same-day service, BS3621 approved, insured.",
+      "Lock replacement in Kennington SE11. Yale, Mul-T-Lock, ERA, Banham supplied and fitted. Call 07984 547185. Same-day service, BS3621 approved, insured.",
     url: "https://lockstarlocksmithkennington.com/services/lock-replacement",
   },
 };
@@ -28,7 +28,7 @@ export default function LockReplacementPage() {
   const webPageSchema = generateWebPageSchema({
     title: "Lock Replacement Kennington | BS3621 Locks SE11",
     description:
-      "Lock replacement in Kennington SE11. Yale, Mul-T-Lock, ERA, Banham supplied and fitted. Call 07700 900000. Same-day service, BS3621 approved, insured.",
+      "Lock replacement in Kennington SE11. Yale, Mul-T-Lock, ERA, Banham supplied and fitted. Call 07984 547185. Same-day service, BS3621 approved, insured.",
     url: "/services/lock-replacement",
     datePublished: "2025-01-15",
     dateModified: "2025-06-01",

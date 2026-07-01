@@ -8,7 +8,7 @@ import { BUSINESS } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Lockout Services Kennington | 24/7 SE11 Help",
   description:
-    "Locked out in Kennington SE11? Call 07700 900000. Non-destructive entry, 20–30 min response, no call-out fee. Home, office & car lockouts covered 24/7.",
+    "Locked out in Kennington SE11? Call 07984 547185. Non-destructive entry, 20–30 min response, no call-out fee. Home, office & car lockouts covered 24/7.",
   alternates: {
     canonical: "/services/lockout-services",
     languages: {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Lockout Services Kennington | 24/7 SE11 Help",
     description:
-      "Locked out in Kennington SE11? Call 07700 900000. Non-destructive entry, 20–30 min response, no call-out fee. Home, office & car lockouts covered 24/7.",
+      "Locked out in Kennington SE11? Call 07984 547185. Non-destructive entry, 20–30 min response, no call-out fee. Home, office & car lockouts covered 24/7.",
     url: "https://lockstarlocksmithkennington.com/services/lockout-services",
   },
 };
@@ -28,7 +28,7 @@ export default function LockoutServicesPage() {
   const webPageSchema = generateWebPageSchema({
     title: "Lockout Services Kennington | 24/7 SE11 Help",
     description:
-      "Locked out in Kennington SE11? Call 07700 900000. Non-destructive entry, 20–30 min response, no call-out fee. Home, office & car lockouts covered 24/7.",
+      "Locked out in Kennington SE11? Call 07984 547185. Non-destructive entry, 20–30 min response, no call-out fee. Home, office & car lockouts covered 24/7.",
     url: "/services/lockout-services",
     datePublished: "2025-01-15",
     dateModified: "2025-06-01",

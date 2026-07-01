@@ -8,7 +8,7 @@ import { BUSINESS } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Locksmith Kensington | 24/7 Emergency W8 SW7",
   description:
-    "Locksmith in Kensington W8 & SW7. High-security locks, emergency lockouts & premium residential service. Call 07700 900000. DBS checked, fast response.",
+    "Locksmith in Kensington W8 & SW7. High-security locks, emergency lockouts & premium residential service. Call 07984 547185. DBS checked, fast response.",
   keywords: [
     "locksmith kensington",
     "kensington locksmith",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Locksmith Kensington | 24/7 Emergency W8 SW7",
     description:
-      "Locksmith in Kensington W8 & SW7. High-security locks, emergency lockouts & premium residential service. Call 07700 900000. DBS checked, fast response.",
+      "Locksmith in Kensington W8 & SW7. High-security locks, emergency lockouts & premium residential service. Call 07984 547185. DBS checked, fast response.",
     url: "https://lockstarlocksmithkennington.com/locations/kensington",
   },
 };
@@ -36,7 +36,7 @@ export default function KensingtonPage() {
   const webPageSchema = generateWebPageSchema({
     title: "Locksmith Kensington | 24/7 Emergency W8 SW7",
     description:
-      "Locksmith in Kensington W8 & SW7. High-security locks, emergency lockouts & premium residential service. Call 07700 900000. DBS checked, fast response.",
+      "Locksmith in Kensington W8 & SW7. High-security locks, emergency lockouts & premium residential service. Call 07984 547185. DBS checked, fast response.",
     url: "/locations/kensington",
     datePublished: "2025-01-15",
     dateModified: "2025-06-01",

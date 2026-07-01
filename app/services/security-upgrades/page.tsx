@@ -8,7 +8,7 @@ import { BUSINESS } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Security Upgrades Kennington | Anti-Snap SE11",
   description:
-    "Home & business security upgrades in Kennington SE11. Anti-snap cylinders, door reinforcement, free security survey. Call 07700 900000. Fully insured.",
+    "Home & business security upgrades in Kennington SE11. Anti-snap cylinders, door reinforcement, free security survey. Call 07984 547185. Fully insured.",
   alternates: {
     canonical: "/services/security-upgrades",
     languages: {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Security Upgrades Kennington | Anti-Snap SE11",
     description:
-      "Home & business security upgrades in Kennington SE11. Anti-snap cylinders, door reinforcement, free security survey. Call 07700 900000. Fully insured.",
+      "Home & business security upgrades in Kennington SE11. Anti-snap cylinders, door reinforcement, free security survey. Call 07984 547185. Fully insured.",
     url: "https://lockstarlocksmithkennington.com/services/security-upgrades",
   },
 };
@@ -28,7 +28,7 @@ export default function SecurityUpgradesPage() {
   const webPageSchema = generateWebPageSchema({
     title: "Security Upgrades Kennington | Anti-Snap SE11",
     description:
-      "Home & business security upgrades in Kennington SE11. Anti-snap cylinders, door reinforcement, free security survey. Call 07700 900000. Fully insured.",
+      "Home & business security upgrades in Kennington SE11. Anti-snap cylinders, door reinforcement, free security survey. Call 07984 547185. Fully insured.",
     url: "/services/security-upgrades",
     datePublished: "2025-01-15",
     dateModified: "2025-06-01",

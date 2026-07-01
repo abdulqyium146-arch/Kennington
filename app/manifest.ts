@@ -33,7 +33,7 @@ export default function manifest(): MetadataRoute.Manifest {
         name: "Call Now",
         short_name: "Call",
         description: "Call Lockstar Locksmith Kennington",
-        url: "tel:07700900000",
+        url: "tel:+447984547185",
         icons: [{ src: "/android-chrome-192x192.png", sizes: "192x192" }],
       },
       {

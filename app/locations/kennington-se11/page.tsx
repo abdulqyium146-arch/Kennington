@@ -8,7 +8,7 @@ import { BUSINESS } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Locksmith Kennington SE11 | 24/7 Local Locksmith",
   description:
-    "Locksmith covering all SE11 postcodes. Emergency lockouts, lock fitting & repairs. Call 07700 900000. DBS checked, 20–30 min response, no call-out fee.",
+    "Locksmith covering all SE11 postcodes. Emergency lockouts, lock fitting & repairs. Call 07984 547185. DBS checked, 20–30 min response, no call-out fee.",
   alternates: {
     canonical: "/locations/kennington-se11",
     languages: {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Locksmith Kennington SE11 | 24/7 Local Locksmith",
     description:
-      "Locksmith covering all SE11 postcodes. Emergency lockouts, lock fitting & repairs. Call 07700 900000. DBS checked, 20–30 min response, no call-out fee.",
+      "Locksmith covering all SE11 postcodes. Emergency lockouts, lock fitting & repairs. Call 07984 547185. DBS checked, 20–30 min response, no call-out fee.",
     url: "https://lockstarlocksmithkennington.com/locations/kennington-se11",
   },
 };
@@ -28,7 +28,7 @@ export default function KenningtionSE11Page() {
   const webPageSchema = generateWebPageSchema({
     title: "Locksmith Kennington SE11 | 24/7 Local Locksmith",
     description:
-      "Locksmith covering all SE11 postcodes. Emergency lockouts, lock fitting & repairs. Call 07700 900000. DBS checked, 20–30 min response, no call-out fee.",
+      "Locksmith covering all SE11 postcodes. Emergency lockouts, lock fitting & repairs. Call 07984 547185. DBS checked, 20–30 min response, no call-out fee.",
     url: "/locations/kennington-se11",
     datePublished: "2025-01-15",
     dateModified: "2025-06-01",

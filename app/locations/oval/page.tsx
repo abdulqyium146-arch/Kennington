@@ -12,7 +12,7 @@ import {
 export const metadata: Metadata = {
   title: "Locksmith Oval SE11 | 24/7 Emergency Locksmith",
   description:
-    "Locksmith in Oval SE11. Emergency lockouts, lock fitting & security upgrades near The Oval. Call 07700 900000. DBS checked, 20–30 min response, no call-out fee.",
+    "Locksmith in Oval SE11. Emergency lockouts, lock fitting & security upgrades near The Oval. Call 07984 547185. DBS checked, 20–30 min response, no call-out fee.",
   keywords: [
     "locksmith oval",
     "oval locksmith",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Locksmith Oval SE11 | 24/7 Emergency Locksmith",
     description:
-      "Locksmith in Oval SE11. Emergency lockouts, lock fitting & security upgrades near The Oval. Call 07700 900000. DBS checked, 20–30 min response, no call-out fee.",
+      "Locksmith in Oval SE11. Emergency lockouts, lock fitting & security upgrades near The Oval. Call 07984 547185. DBS checked, 20–30 min response, no call-out fee.",
     url: "https://lockstarlocksmithkennington.com/locations/oval",
   },
 };
@@ -39,7 +39,7 @@ export default function OvalPage() {
   const webPageSchema = generateWebPageSchema({
     title: "Locksmith Oval SE11 | 24/7 Emergency Locksmith",
     description:
-      "Locksmith in Oval SE11. Emergency lockouts, lock fitting & security upgrades near The Oval. Call 07700 900000. DBS checked, 20–30 min response, no call-out fee.",
+      "Locksmith in Oval SE11. Emergency lockouts, lock fitting & security upgrades near The Oval. Call 07984 547185. DBS checked, 20–30 min response, no call-out fee.",
     url: "/locations/oval",
     datePublished: "2025-01-15",
     dateModified: "2025-06-01",

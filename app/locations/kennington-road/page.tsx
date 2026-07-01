@@ -8,7 +8,7 @@ import { BUSINESS } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Locksmith Kennington Road SE11 | 24/7 Service",
   description:
-    "Locksmith on Kennington Road SE11. Emergency lockouts, lock fitting & security upgrades. Call 07700 900000. DBS checked, fast local response, no call-out fee.",
+    "Locksmith on Kennington Road SE11. Emergency lockouts, lock fitting & security upgrades. Call 07984 547185. DBS checked, fast local response, no call-out fee.",
   alternates: {
     canonical: "/locations/kennington-road",
     languages: {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Locksmith Kennington Road SE11 | 24/7 Service",
     description:
-      "Locksmith on Kennington Road SE11. Emergency lockouts, lock fitting & security upgrades. Call 07700 900000. DBS checked, fast local response, no call-out fee.",
+      "Locksmith on Kennington Road SE11. Emergency lockouts, lock fitting & security upgrades. Call 07984 547185. DBS checked, fast local response, no call-out fee.",
     url: "https://lockstarlocksmithkennington.com/locations/kennington-road",
   },
 };
@@ -28,7 +28,7 @@ export default function KenningtonRoadPage() {
   const webPageSchema = generateWebPageSchema({
     title: "Locksmith Kennington Road SE11 | 24/7 Service",
     description:
-      "Locksmith on Kennington Road SE11. Emergency lockouts, lock fitting & security upgrades. Call 07700 900000. DBS checked, fast local response, no call-out fee.",
+      "Locksmith on Kennington Road SE11. Emergency lockouts, lock fitting & security upgrades. Call 07984 547185. DBS checked, fast local response, no call-out fee.",
     url: "/locations/kennington-road",
     datePublished: "2025-01-15",
     dateModified: "2025-06-01",

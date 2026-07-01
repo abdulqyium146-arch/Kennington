@@ -8,7 +8,7 @@ import { BUSINESS } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Burglary Repairs Kennington | Emergency SE11",
   description:
-    "Burglary repairs in Kennington SE11. Emergency boarding up, damage repair, lock upgrade after break-in. Call 07700 900000. Same-day response. Fully insured.",
+    "Burglary repairs in Kennington SE11. Emergency boarding up, damage repair, lock upgrade after break-in. Call 07984 547185. Same-day response. Fully insured.",
   alternates: {
     canonical: "/services/burglary-repairs",
     languages: {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Burglary Repairs Kennington | Emergency SE11",
     description:
-      "Burglary repairs in Kennington SE11. Emergency boarding up, damage repair, lock upgrade after break-in. Call 07700 900000. Same-day response. Fully insured.",
+      "Burglary repairs in Kennington SE11. Emergency boarding up, damage repair, lock upgrade after break-in. Call 07984 547185. Same-day response. Fully insured.",
     url: "https://lockstarlocksmithkennington.com/services/burglary-repairs",
   },
 };
@@ -28,7 +28,7 @@ export default function BurglaryRepairsPage() {
   const webPageSchema = generateWebPageSchema({
     title: "Burglary Repairs Kennington | Emergency SE11",
     description:
-      "Burglary repairs in Kennington SE11. Emergency boarding up, damage repair, lock upgrade after break-in. Call 07700 900000. Same-day response. Fully insured.",
+      "Burglary repairs in Kennington SE11. Emergency boarding up, damage repair, lock upgrade after break-in. Call 07984 547185. Same-day response. Fully insured.",
     url: "/services/burglary-repairs",
     datePublished: "2025-01-15",
     dateModified: "2025-06-01",

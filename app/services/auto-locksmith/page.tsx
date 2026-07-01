@@ -8,7 +8,7 @@ import { BUSINESS } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Auto Locksmith Kennington | Car Lockout SE11",
   description:
-    "Auto locksmith in Kennington SE11. Car lockouts, key cutting, transponder programming. All makes. Call 07700 900000. Non-destructive vehicle entry. 24/7.",
+    "Auto locksmith in Kennington SE11. Car lockouts, key cutting, transponder programming. All makes. Call 07984 547185. Non-destructive vehicle entry. 24/7.",
   alternates: {
     canonical: "/services/auto-locksmith",
     languages: {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Auto Locksmith Kennington | Car Lockout SE11",
     description:
-      "Auto locksmith in Kennington SE11. Car lockouts, key cutting, transponder programming. All makes. Call 07700 900000. Non-destructive vehicle entry. 24/7.",
+      "Auto locksmith in Kennington SE11. Car lockouts, key cutting, transponder programming. All makes. Call 07984 547185. Non-destructive vehicle entry. 24/7.",
     url: "https://lockstarlocksmithkennington.com/services/auto-locksmith",
   },
 };
@@ -28,7 +28,7 @@ export default function AutoLocksmithPage() {
   const webPageSchema = generateWebPageSchema({
     title: "Auto Locksmith Kennington | Car Lockout SE11",
     description:
-      "Auto locksmith in Kennington SE11. Car lockouts, key cutting, transponder programming. All makes. Call 07700 900000. Non-destructive vehicle entry. 24/7.",
+      "Auto locksmith in Kennington SE11. Car lockouts, key cutting, transponder programming. All makes. Call 07984 547185. Non-destructive vehicle entry. 24/7.",
     url: "/services/auto-locksmith",
     datePublished: "2025-01-15",
     dateModified: "2025-06-01",
