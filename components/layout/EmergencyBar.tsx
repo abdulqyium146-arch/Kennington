@@ -1,28 +1,29 @@
-"use client";
-
-import { Phone, Clock, AlertCircle } from "lucide-react";
+import { Phone, Clock, Zap } from "lucide-react";
 import { BUSINESS } from "@/lib/constants";
 
 export default function EmergencyBar() {
   return (
-    <div className="bg-red-600 text-white py-2.5 px-4">
-      <div className="container-main flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-sm font-semibold">
-        <div className="flex items-center gap-2">
-          <AlertCircle className="h-4 w-4 flex-shrink-0 animate-pulse" />
-          <span>24/7 Emergency Locksmith — Kennington &amp; SE11</span>
+    <div className="bg-slate-900 text-white py-2 px-4 border-b border-slate-800">
+      <div className="container-main flex items-center justify-center gap-2 sm:gap-6 text-xs font-medium">
+        <div className="flex items-center gap-1.5 text-slate-300">
+          <Zap className="h-3.5 w-3.5 text-amber-400 flex-shrink-0" aria-hidden="true" />
+          <span className="hidden sm:inline">24/7 Emergency Locksmith</span>
+          <span className="sm:hidden">24/7 Locksmith</span>
+          <span className="text-slate-500">·</span>
+          <span className="text-slate-300">Kennington SE11</span>
         </div>
-        <div className="hidden sm:block w-px h-4 bg-red-400" />
-        <div className="flex items-center gap-2">
-          <Clock className="h-4 w-4 flex-shrink-0" />
-          <span>20–30 Min Response</span>
+
+        <div className="hidden sm:flex items-center gap-1.5 text-slate-400">
+          <Clock className="h-3.5 w-3.5 flex-shrink-0" aria-hidden="true" />
+          <span>20–30 min response</span>
         </div>
-        <div className="hidden sm:block w-px h-4 bg-red-400" />
+
         <a
           href={BUSINESS.phoneHref}
-          className="flex items-center gap-2 bg-white text-red-600 px-4 py-1 rounded-full hover:bg-red-50 transition-colors duration-150 font-bold"
+          className="flex items-center gap-1.5 bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded-md font-semibold text-xs transition-colors duration-150 ml-1"
           aria-label={`Call Lockstar Locksmith now: ${BUSINESS.phone}`}
         >
-          <Phone className="h-3.5 w-3.5" />
+          <Phone className="h-3 w-3" aria-hidden="true" />
           <span>{BUSINESS.phone}</span>
         </a>
       </div>

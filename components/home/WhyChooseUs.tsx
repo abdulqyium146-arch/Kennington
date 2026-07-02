@@ -6,69 +6,68 @@ const reasons = [
     icon: Clock,
     title: "Genuinely Fast Response",
     description:
-      "Our locksmiths are based in and around Kennington — not dispatched from a distant depot. When you call, help is truly nearby. Average arrival: 20–30 minutes.",
+      "Based in Kennington — not dispatched from a distant depot. Average arrival: 20–30 minutes.",
   },
   {
     icon: Shield,
     title: "DBS Checked & Insured",
     description:
-      "Every Lockstar technician holds a DBS (Disclosure and Barring Service) certificate and carries full public liability insurance. Your home and family are protected.",
+      "Every technician is police-vetted and carries full public liability insurance.",
   },
   {
     icon: Banknote,
     title: "No Hidden Charges",
     description:
-      "We quote a fixed price before any work begins. The price we quote is the price you pay — no surprise charges, no inflated night-time rates, no call-out fees.",
+      "Fixed price before work starts. No surprise charges, inflated night rates, or call-out fees.",
   },
   {
     icon: ThumbsUp,
     title: "Non-Destructive Entry",
     description:
-      "Our trained technicians use professional non-destructive methods to open locks in the vast majority of cases — saving you the cost of a new door or frame.",
+      "Professional techniques to open locks without damaging your door or frame in most cases.",
   },
   {
     icon: MapPin,
     title: "Truly Local Locksmith",
     description:
-      "Lockstar is a local Kennington business — not a national call centre. When you call us, you speak directly with a locksmith who knows the local area.",
+      "A local Kennington business — not a national call centre. Speak directly with a locksmith.",
   },
   {
     icon: HeartHandshake,
     title: "Trusted by the Community",
-    description:
-      "With over {years} years serving Kennington and SE11, and {reviews}+ five-star Google reviews, we have built a reputation on trust, reliability and honest pricing.",
+    description: `Over ${BUSINESS.socialProof.yearsTrading} years in SE11, ${BUSINESS.socialProof.reviewCount}+ five-star Google reviews, built on trust and honest pricing.`,
   },
 ];
 
 export default function WhyChooseUs() {
   return (
-    <section className="section-padding bg-white" aria-label="Why choose Lockstar Locksmith Kennington">
+    <section
+      className="section-padding bg-white"
+      aria-label="Why choose Lockstar Locksmith Kennington"
+    >
       <div className="container-main">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Left: Content */}
-          <div>
-            <p className="text-blue-700 font-semibold text-sm uppercase tracking-wider mb-3">
-              Why Choose Us
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-black text-slate-900 mb-5">
-              Kennington&apos;s Most Trusted
-              <br />
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+
+          {/* Left */}
+          <div className="lg:sticky lg:top-28">
+            <p className="eyebrow mb-3">Why Choose Us</p>
+            <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-5">
+              Kennington&apos;s Most Trusted{" "}
               <span className="text-blue-700">Local Locksmith</span>
             </h2>
-            <p className="text-slate-600 leading-relaxed mb-8">
-              Choosing a locksmith is a matter of trust — you&apos;re inviting someone
-              into your home or business in often stressful circumstances. At Lockstar,
-              we have built our reputation on being the most reliable, honest, and
-              professional locksmith in Kennington.
+            <p className="text-slate-500 text-sm leading-relaxed mb-8">
+              Choosing a locksmith is about trust — you&apos;re inviting someone into your home
+              in stressful circumstances. Lockstar has built its reputation on being the most
+              reliable, honest, and professional locksmith in Kennington.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row gap-3 mb-10">
               <a
                 href={BUSINESS.phoneHref}
                 className="btn-emergency"
                 aria-label={`Call Lockstar: ${BUSINESS.phone}`}
               >
-                <Phone className="h-5 w-5" />
+                <Phone className="h-4.5 w-4.5" aria-hidden="true" />
                 Call {BUSINESS.phone}
               </a>
               <a href="/about" className="btn-primary">
@@ -77,45 +76,34 @@ export default function WhyChooseUs() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-4 mt-10 pt-10 border-t border-slate-100">
-              <div className="text-center">
-                <p className="text-3xl font-black text-slate-900">
-                  {BUSINESS.socialProof.reviewCount}+
-                </p>
-                <p className="text-sm text-slate-500 mt-1">5-Star Reviews</p>
-              </div>
-              <div className="text-center">
-                <p className="text-3xl font-black text-slate-900">
-                  {BUSINESS.socialProof.yearsTrading}+
-                </p>
-                <p className="text-sm text-slate-500 mt-1">Years Serving SE11</p>
-              </div>
-              <div className="text-center">
-                <p className="text-3xl font-black text-slate-900">24/7</p>
-                <p className="text-sm text-slate-500 mt-1">Emergency Cover</p>
-              </div>
+            <div className="grid grid-cols-3 divide-x divide-slate-100 bg-slate-50 border border-slate-100 rounded-2xl overflow-hidden">
+              {[
+                { value: `${BUSINESS.socialProof.reviewCount}+`, label: "5-Star Reviews" },
+                { value: `${BUSINESS.socialProof.yearsTrading}+`, label: "Years in SE11" },
+                { value: "24/7", label: "Emergency Cover" },
+              ].map((stat) => (
+                <div key={stat.label} className="text-center py-5 px-2">
+                  <p className="text-2xl font-black text-slate-900">{stat.value}</p>
+                  <p className="text-xs text-slate-500 mt-0.5">{stat.label}</p>
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* Right: Reasons grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {/* Right: reasons grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {reasons.map((reason) => {
               const Icon = reason.icon;
-              const description = reason.description
-                .replace("{years}", BUSINESS.socialProof.yearsTrading.toString())
-                .replace("{reviews}", BUSINESS.socialProof.reviewCount.toString());
               return (
                 <div
                   key={reason.title}
-                  className="bg-slate-50 border border-slate-200 rounded-2xl p-5 hover:border-blue-200 hover:bg-blue-50 transition-colors duration-200"
+                  className="bg-slate-50 border border-slate-200 rounded-xl p-4.5 hover:border-blue-200 hover:bg-blue-50/60 transition-all duration-150 group"
                 >
-                  <div className="flex items-center justify-center w-10 h-10 bg-blue-100 rounded-xl mb-3">
-                    <Icon className="h-5 w-5 text-blue-700" />
+                  <div className="flex items-center justify-center w-9 h-9 bg-blue-100 rounded-lg mb-3 group-hover:bg-blue-200 transition-colors duration-150">
+                    <Icon className="h-4.5 w-4.5 text-blue-700" aria-hidden="true" />
                   </div>
-                  <h3 className="font-bold text-slate-900 mb-2 text-sm">
-                    {reason.title}
-                  </h3>
-                  <p className="text-slate-600 text-xs leading-relaxed">{description}</p>
+                  <h3 className="font-bold text-slate-900 mb-1.5 text-sm">{reason.title}</h3>
+                  <p className="text-slate-500 text-xs leading-relaxed">{reason.description}</p>
                 </div>
               );
             })}
